@@ -30,7 +30,7 @@ function updateActivity() {
           if(debug) console.log("Updated rust-servers.info");
           return client.user.setPresence({ game: { name: `${players}/${maxplayers}`, type: 0 } });
         } else {
-          return client.user.setActivity("Offline");
+          return client.user.setPresence({ game: { name: 'Offline', type: 0 } });
         }
       }
     });
@@ -97,6 +97,36 @@ if (enableRcon == 1)
     });
   }
   else if (debug) console.log("Rcon mode disabled")
+
+bot.on("message", async message => {
+  if(message.author.bot) return;
+  if(message.channel.type === "dm") return;
+
+  let messageArray = message.content.split(" ");
+  let cmd = messageArray[0];
+  let args = messageArray.slice(1);
+
+  if(cmd === `!ip`){
+    return message.channel.send("**The SHIELD Rust Server was closed.**");
+  }
+  if(cmd === `!vote`){
+    return message.channel.send("**The SHIELD Rust Server was closed.**");
+  }
+  if(cmd === `!website`){
+    return message.channel.send("**The SHIELD Rust Server was closed.**");
+  }
+  if(cmd === `!wipe`){
+    return message.channel.send("**The SHIELD Rust Server was closed.**");
+  }
+  if(cmd === `!steam`){
+    return message.channel.send("**The SHIELD Rust Server was closed.**");
+  }
+  
+});
+
+
+
+
 
 client.on("guildCreate", guild => {
   console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
