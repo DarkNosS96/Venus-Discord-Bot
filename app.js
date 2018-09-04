@@ -106,6 +106,6 @@ client.on("guildDelete", guild => {
   console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
 });
 
-client.login(process.env.token || config.token);
+bot.login(process.env.BOT_TOKEN);
 
 
