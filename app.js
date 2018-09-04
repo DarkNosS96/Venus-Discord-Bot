@@ -28,7 +28,7 @@ function updateActivity() {
           const players = server.players;
           const maxplayers = server.players_max;
           if(debug) console.log("Updated rust-servers.info");
-          return client.user.setPresence({ game: { name: 'Check #help', type: 0 } });
+          return client.user.setPresence({ game: { name: `${players}/${maxplayers}`, type: 0 } });
         } else {
           return client.user.setActivity("Offline");
         }
