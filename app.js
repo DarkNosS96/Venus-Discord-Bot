@@ -107,19 +107,19 @@ client.on("message", async message => {
   let args = messageArray.slice(1);
 
   if(cmd === `!ip`){
-    return message.channel.send("**The SHIELD Rust Server was closed.**");
+    return message.channel.send("`client.connect 195.201.86.252:28416`");
   }
   if(cmd === `!vote`){
-    return message.channel.send("**The SHIELD Rust Server was closed.**");
+    return message.channel.send("https://rust-servers.net/server/145824/");
   }
   if(cmd === `!website`){
-    return message.channel.send("**The SHIELD Rust Server was closed.**");
+    return message.channel.send("Our website is not ready yet...");
   }
   if(cmd === `!wipe`){
-    return message.channel.send("**The SHIELD Rust Server was closed.**");
+    return message.channel.send("The last wipe was on Fri 31 Aug. The next wipe will be on Wed 5 Sep. (Weekly Wipes)");
   }
   if(cmd === `!steam`){
-    return message.channel.send("**The SHIELD Rust Server was closed.**");
+    return message.channel.send("https://steamcommunity.com/groups/Venus-Rust");
   }
   
 });
