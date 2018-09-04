@@ -1,6 +1,5 @@
 { 
   "debug" : false,
-  "token"  : "NDg2NTAxNDEwMjQ3MDE2NDY4.DnAI8g.1uW7ETYF3LkNrhoEP_sIMAHCG4Y",
   "apiSite" : 1,
   "apiUrl" : "https://api.rust-servers.info/status/1605",
   "enableRcon" : "1",
