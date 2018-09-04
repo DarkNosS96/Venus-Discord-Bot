@@ -84,9 +84,9 @@ if (enableRcon == 1)
       argumentString = `${getMessage}`;
       
       // Rcon Config
-      rconhost = process.env.rconhost || config.rconhost;
-      rconport = process.env.rconport || config.rconport;
-      rconpass = process.env.rconpass || config.rconpass;
+      rconhost = (process.env.rconhost);
+      rconport = (process.env.rconport);
+      rconpass = (process.env.rconpass);
       
       // Run rcon command.
       rcon.RconApp(argumentString, rconhost, rconport,rconpass, debug);
