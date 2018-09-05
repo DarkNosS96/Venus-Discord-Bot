@@ -134,7 +134,7 @@ let avatar = member.user.displayAvatarURL;
 let channel = member.guild.channels.find("name", '✋welcome');
   if (!channel) return;
     let embed = new Discord.RichEmbed()
-    .setAuthor('Hello and welcome to **Venus Rust Server**')
+    .setAuthor('Hello and welcome to Venus Rust Server')
   	.setColor('RANDOM')
     .setThumbnail(avatar)
     .setImage('https://i.imgur.com/z9pih7T.png')
