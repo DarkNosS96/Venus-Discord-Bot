@@ -129,7 +129,7 @@ client.on("message", async message => {
 			if (message.member.hasPermission("ADMINISTRATOR")) {
 				const color = args[0]
 				const text = args.slice(0).join(" ");
-				let channel = client.channels.find("id", "485180442706968604");
+				let channel = client.channels.find("id", "486884048514449408");
 					if (text.length < 1) return message.channel.send("Can not announce nothing");
 					channel.send(text)
 			}
@@ -138,7 +138,7 @@ client.on("message", async message => {
 			if (message.member.hasPermission("ADMINISTRATOR")) {
 				const color = args[0]
 				const text = args.slice(0).join(" ");
-				let channel = client.channels.find("id", "485303381594734593");
+				let channel = client.channels.find("id", "486884087475470337");
 					if (text.length < 1) return message.channel.send("Can not announce nothing");
 					channel.send(text)
 			}
@@ -147,7 +147,7 @@ client.on("message", async message => {
 			if (message.member.hasPermission("ADMINISTRATOR")) {
 			const color = args[0]
 			const text = args.slice(0).join(" ");
-			let channel = client.channels.find("id", "485175776828719110");
+			let channel = client.channels.find("id", "486884105661972480");
 				if (text.length < 1) return message.channel.send("Can not announce nothing");
 				channel.send(text)
 			}
@@ -156,7 +156,7 @@ client.on("message", async message => {
 			if (message.member.hasPermission("ADMINISTRATOR")) {
 			const color = args[0]
 			const text = args.slice(0).join(" ");
-			let channel = client.channels.find("id", "485308635547828234");
+			let channel = client.channels.find("id", "486884114885246987");
 				if (text.length < 1) return message.channel.send("Can not announce nothing");
 				channel.send(text)
 			}
@@ -165,7 +165,7 @@ client.on("message", async message => {
 		if (message.member.hasPermission("ADMINISTRATOR")) {
 			const color = args[0]
 			const text = args.slice(0).join(" ");
-			let channel = client.channels.find("id", "485171202583691266");
+			let channel = client.channels.find("id", "486884137006006285");
 				if (text.length < 1) return message.channel.send("Can not announce nothing");
 				channel.send(text)
 			}
@@ -174,7 +174,7 @@ client.on("message", async message => {
 		if (message.member.hasPermission("ADMINISTRATOR")) {
 			const color = args[0]
 			const text = args.slice(0).join(" ");
-			let channel = client.channels.find("id", "485700006557253652");
+			let channel = client.channels.find("id", "486884158589894669");
 				if (text.length < 1) return message.channel.send("Can not announce nothing");
 				channel.send(text)
 			}
@@ -183,7 +183,7 @@ client.on("message", async message => {
 			if (message.member.hasPermission("ADMINISTRATOR")) {
 			const color = args[0]
 			const text = args.slice(0).join(" ");
-			let channel = client.channels.find("id", "486525407831785498");
+			let channel = client.channels.find("id", "486885181303685138");
 				if (text.length < 1) return message.channel.send("Can not announce nothing");
 				channel.send(text)
 			}
@@ -192,7 +192,7 @@ client.on("message", async message => {
 		if (message.member.hasPermission("ADMINISTRATOR")) {
 			const color = args[0]
 			const text = args.slice(0).join(" ");
-			let channel = client.channels.find("id", "485308635547828234");
+			let channel = client.channels.find("id", "486884137006006285");
 				if (text.length < 1) return message.channel.send("Can not announce nothing");
 				channel.send("@everyone")
 				channel.send(text)
@@ -212,7 +212,7 @@ client.on("message", async message => {
 			if (message.member.hasPermission("ADMINISTRATOR")) {
 			const color = args[0]
 			const text = args.slice(0).join(" ");
-			let channel = client.channels.find("id", "486739215321661492");
+			let channel = client.channels.find("id", "486884171101241354");
 				if (text.length < 1) return message.channel.send("Can not announce nothing");
 				channel.send(text)
 			}
