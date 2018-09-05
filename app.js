@@ -131,8 +131,7 @@ client.on("message", async message => {
 				const text = args.slice(0).join(" ");
 				let channel = client.channels.find("id", "485180442706968604");
 					if (text.length < 1) return message.channel.send("Can not announce nothing");
-						const embed = new Discord.RichEmbed()
-						channel.send(text)
+					channel.send(text)
 			}
 		} else
 		if (command === "sayinfo") {
@@ -141,8 +140,7 @@ client.on("message", async message => {
 				const text = args.slice(0).join(" ");
 				let channel = client.channels.find("id", "485303381594734593");
 					if (text.length < 1) return message.channel.send("Can not announce nothing");
-					const embed = new Discord.RichEmbed()
-				channel.send(text)
+					channel.send(text)
 			}
 		} else
 		if (command === "saycommands") {
@@ -151,7 +149,6 @@ client.on("message", async message => {
 			const text = args.slice(0).join(" ");
 			let channel = client.channels.find("id", "485175776828719110");
 				if (text.length < 1) return message.channel.send("Can not announce nothing");
-				const embed = new Discord.RichEmbed()
 				channel.send(text)
 			}
 		} else
@@ -161,8 +158,7 @@ client.on("message", async message => {
 			const text = args.slice(0).join(" ");
 			let channel = client.channels.find("id", "485308635547828234");
 				if (text.length < 1) return message.channel.send("Can not announce nothing");
-				const embed = new Discord.RichEmbed()
-			channel.send(text)
+				channel.send(text)
 			}
 		} else
 	if (command === "saygeneral") {
@@ -171,8 +167,7 @@ client.on("message", async message => {
 			const text = args.slice(0).join(" ");
 			let channel = client.channels.find("id", "485171202583691266");
 				if (text.length < 1) return message.channel.send("Can not announce nothing");
-				const embed = new Discord.RichEmbed()
-			channel.send(text)
+				channel.send(text)
 			}
 		} else
 		if (command === "saysuggestions") {
@@ -181,8 +176,7 @@ client.on("message", async message => {
 			const text = args.slice(0).join(" ");
 			let channel = client.channels.find("id", "485700006557253652");
 				if (text.length < 1) return message.channel.send("Can not announce nothing");
-				const embed = new Discord.RichEmbed()
-			channel.send(text)
+				channel.send(text)
 			}
 		} else
 		if (command === "sayrust") {
@@ -191,8 +185,7 @@ client.on("message", async message => {
 			const text = args.slice(0).join(" ");
 			let channel = client.channels.find("id", "486525407831785498");
 				if (text.length < 1) return message.channel.send("Can not announce nothing");
-				const embed = new Discord.RichEmbed()
-			channel.send(text)
+				channel.send(text)
 			}
 		} else
 		if (command === "sayall") {
@@ -201,7 +194,6 @@ client.on("message", async message => {
 			const text = args.slice(0).join(" ");
 			let channel = client.channels.find("id", "485308635547828234");
 				if (text.length < 1) return message.channel.send("Can not announce nothing");
-				const embed = new Discord.RichEmbed()
 				channel.send("@everyone")
 				channel.send(text)
 			}
@@ -212,8 +204,16 @@ client.on("message", async message => {
 			const text = args.slice(0).join(" ");
 			let channel = client.channels.find("id", "485176392921645087");
 				if (text.length < 1) return message.channel.send("Can not announce nothing");
-				const embed = new Discord.RichEmbed()
 				channel.send("@everyone")
+				channel.send(text)
+			}
+		} else
+		if (command === "photos") {
+			if (message.member.hasPermission("ADMINISTRATOR")) {
+			const color = args[0]
+			const text = args.slice(0).join(" ");
+			let channel = client.channels.find("id", "486739215321661492");
+				if (text.length < 1) return message.channel.send("Can not announce nothing");
 				channel.send(text)
 			}
 		}	
