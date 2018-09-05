@@ -125,6 +125,25 @@ client.on("message", async message => {
 });
 
 
+client.on("guildMemberAdd", (member) => {
+let info = member.guild.channels.find("name", '📰info');
+let commands = member.guild.channels.find("name", '❗commands');
+let guild = member.guild; // Reading property `guild` of guildmember object.
+let memberTag = member.user.tag;
+let avatar = member.user.displayAvatarURL;
+let channel = member.guild.channels.find("name", '✋welcome');
+  if (!channel) return;
+    let embed = new Discord.RichEmbed()
+    .setAuthor('Hello and welcome to **Venus Rust Server**')
+  	.setColor('RANDOM')
+    .setThumbnail(avatar)
+    .setImage('https://i.imgur.com/z9pih7T.png')
+  	.setDescription (member + '\n\nNeed help? Check ' + info + ' and ' + commands + ' or ask a staff member. Do not forget to have fun!')
+    .setTimestamp()
+    .setFooter("You joined out server ", "https://i.imgur.com/IL2u3LF.png")
+    channel.sendEmbed(embed);
+});
+
 
 
 
