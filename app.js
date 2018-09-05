@@ -2,7 +2,6 @@ const Discord = require("discord.js");
 const request = require('request');
 const config = require("./config.json");
 const rcon = require("./rcon/app.js");
-
 const debug = process.env.debug || config.debug;
 const apiUrl = process.env.apiUrl || config.apiUrl; 
 const apiSite = process.env.apiSite || config.apiSite;
@@ -10,57 +9,54 @@ const enableRcon = process.env.enableRcon || config.enableRcon;
 const prefix = process.env.prefix || config.prefix;
 const roles = process.env.roles || config.roles;
 
-
 var updateInterval = (1000 * 60) * 6;
 
 const client = new Discord.Client();
 
 function updateActivity() {
-  if(apiSite == 1) {
-    require("tls").DEFAULT_ECDH_CURVE = "auto"
-    request({ url: apiUrl, headers: { json: true, Referer: 'discord-rustserverstatus' }, timeout: 10000 }, function(err, res, body)
-    {
-      if (!err && res.statusCode == 200)
-      {
-        const server = JSON.parse(body);
-        const is_online = server.status;
-        if(is_online == "Online") {
-          const players = server.players;
-          const maxplayers = server.players_max;
-          if(debug) console.log("Updated rust-servers.info");
-          return client.user.setPresence({ game: { name: `${players}/${maxplayers}`, type: 0 } });
-        } else {
-          return client.user.setPresence({ game: { name: 'Offline', type: 0 } });
-        }
-      }
-    });
+	if(apiSite == 1) {
+		require("tls").DEFAULT_ECDH_CURVE = "auto"
+		request({ url: apiUrl, headers: { json: true, Referer: 'discord-rustserverstatus' }, timeout: 10000 }, function(err, res, body)
+		{
+		if (!err && res.statusCode == 200){
+			const server = JSON.parse(body);
+			const is_online = server.status;
+				if(is_online == "Online") {
+					const players = server.players;
+					const maxplayers = server.players_max;
+						if(debug) console.log("Updated rust-servers.info");
+						return client.user.setPresence({ game: { name: `${players}/${maxplayers}`, type: 0 } });
+						} else {
+							return client.user.setPresence({ game: { name: 'Offline', type: 0 } });
+						}
+		}
+		});
   }
-  if(apiSite == 2) {
+ if(apiSite == 2) {
     request({ url: apiUrl, headers: { Referer: 'discord-rustserverstatus' }, timeout: 10000 }, function(error, response, body)
     {
-      if (!error && response.statusCode == 200)
-      {
+	if (!error && response.statusCode == 200){
         const server = JSON.parse(body);
         const is_online = server.is_online;
         if(is_online == 1) {
-          const players = server.players;
-          const maxplayers = server.maxplayers;
-          if(debug) console.log("Updated rust-servers.net");
-          return client.user.setActivity(`${players}/${maxplayers}`);
-        } else {
-          return client.user.setActivity("Offline");
-        }
-      }
+			const players = server.players;
+			const maxplayers = server.maxplayers;
+			if(debug) console.log("Updated rust-servers.net");
+			return client.user.setActivity(`${players}/${maxplayers}`);
+			} else {
+				return client.user.setActivity("Offline");
+			}
+		}
     });
-  }
+}
 }
 
 client.on("ready", () => {
-  console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`);
-  updateActivity();
-  setInterval(function () {
+	console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`);
+	updateActivity();
+	setInterval(function () {
     updateActivity();
-  }, updateInterval);
+	}, updateInterval);
 });
 
 if (enableRcon == 1)
@@ -98,30 +94,130 @@ if (enableRcon == 1)
   }
   else if (debug) console.log("Rcon mode disabled")
 
-client.on("message", async message => {
-  if(message.author.bot) return;
-  if(message.channel.type === "dm") return;
-
-  let messageArray = message.content.split(" ");
-  let cmd = messageArray[0];
-  let args = messageArray.slice(1);
-
-  if(cmd === `!ip`){
-    return message.channel.send("`client.connect 195.201.86.252:28416`");
-  }
-  if(cmd === `!vote`){
-    return message.channel.send("https://rust-servers.net/server/145824/");
-  }
-  if(cmd === `!website`){
-    return message.channel.send("Our website is not ready yet...");
-  }
-  if(cmd === `!wipe`){
-    return message.channel.send("The last wipe was on Fri 31 Aug. The next wipe will be on Wed 5 Sep. (Weekly Wipes)");
-  }
-  if(cmd === `!steam`){
-    return message.channel.send("https://steamcommunity.com/groups/Venus-Rust");
-  }
   
+  
+  
+  
+client.on("message", async message => {
+	if(message.author.bot) return;
+		if(message.channel.type === "dm") return;
+
+		let messageArray = message.content.split(" ");
+		let cmd = messageArray[0];
+		let args = messageArray.slice(1);
+
+		if(cmd === `!ip`){
+			return message.channel.send("`client.connect 195.201.86.252:28416`");
+		}
+		if(cmd === `!vote`){
+			return message.channel.send("https://rust-servers.net/server/145824/");
+		}
+		if(cmd === `!website`){
+			return message.channel.send("Our website is not ready yet...");
+		}
+		if(cmd === `!wipe`){
+			return message.channel.send("The last wipe was on Fri 31 Aug. The next wipe will be on Wed 5 Sep. (Weekly Wipes)");
+		}
+		if(cmd === `!steam`){
+			return message.channel.send("https://steamcommunity.com/groups/Venus-Rust");
+		}
+		
+		
+		let command = message.content.split(" ")[0];
+		command = command.slice(prefix.length);
+		let args = message.content.split(" ").slice(1);
+		if (command === "saywelcome") {
+			if (message.member.hasPermission("ADMINISTRATOR")) {
+				const color = args[0]
+				const text = args.slice(0).join(" ");
+				let channel = client.channels.find("id", "485180442706968604");
+					if (text.length < 1) return message.channel.send("Can not announce nothing");
+						const embed = new Discord.RichEmbed()
+						channel.send(text)
+			}
+		} else
+		if (command === "sayinfo") {
+			if (message.member.hasPermission("ADMINISTRATOR")) {
+				const color = args[0]
+				const text = args.slice(0).join(" ");
+				let channel = client.channels.find("id", "485303381594734593");
+					if (text.length < 1) return message.channel.send("Can not announce nothing");
+					const embed = new Discord.RichEmbed()
+				channel.send(text)
+			}
+		} else
+		if (command === "saycommands") {
+			if (message.member.hasPermission("ADMINISTRATOR")) {
+			const color = args[0]
+			const text = args.slice(0).join(" ");
+			let channel = client.channels.find("id", "485175776828719110");
+				if (text.length < 1) return message.channel.send("Can not announce nothing");
+				const embed = new Discord.RichEmbed()
+				channel.send(text)
+			}
+		} else
+		if (command === "saynews") {
+			if (message.member.hasPermission("ADMINISTRATOR")) {
+			const color = args[0]
+			const text = args.slice(0).join(" ");
+			let channel = client.channels.find("id", "485308635547828234");
+				if (text.length < 1) return message.channel.send("Can not announce nothing");
+				const embed = new Discord.RichEmbed()
+			channel.send(text)
+			}
+		} else
+	if (command === "saygeneral") {
+		if (message.member.hasPermission("ADMINISTRATOR")) {
+			const color = args[0]
+			const text = args.slice(0).join(" ");
+			let channel = client.channels.find("id", "485171202583691266");
+				if (text.length < 1) return message.channel.send("Can not announce nothing");
+				const embed = new Discord.RichEmbed()
+			channel.send(text)
+			}
+		} else
+		if (command === "saysuggestions") {
+		if (message.member.hasPermission("ADMINISTRATOR")) {
+			const color = args[0]
+			const text = args.slice(0).join(" ");
+			let channel = client.channels.find("id", "485700006557253652");
+				if (text.length < 1) return message.channel.send("Can not announce nothing");
+				const embed = new Discord.RichEmbed()
+			channel.send(text)
+			}
+		} else
+		if (command === "sayrust") {
+			if (message.member.hasPermission("ADMINISTRATOR")) {
+			const color = args[0]
+			const text = args.slice(0).join(" ");
+			let channel = client.channels.find("id", "486525407831785498");
+				if (text.length < 1) return message.channel.send("Can not announce nothing");
+				const embed = new Discord.RichEmbed()
+			channel.send(text)
+			}
+		} else
+		if (command === "sayall") {
+		if (message.member.hasPermission("ADMINISTRATOR")) {
+			const color = args[0]
+			const text = args.slice(0).join(" ");
+			let channel = client.channels.find("id", "485308635547828234");
+				if (text.length < 1) return message.channel.send("Can not announce nothing");
+				const embed = new Discord.RichEmbed()
+				channel.send("@everyone")
+				channel.send(text)
+			}
+		} else
+		if (command === "sayadmin") {
+			if (message.member.hasPermission("ADMINISTRATOR")) {
+			const color = args[0]
+			const text = args.slice(0).join(" ");
+			let channel = client.channels.find("id", "485176392921645087");
+				if (text.length < 1) return message.channel.send("Can not announce nothing");
+				const embed = new Discord.RichEmbed()
+				channel.send("@everyone")
+				channel.send(text)
+			}
+		}	
 });
 
 
@@ -143,6 +239,16 @@ let channel = member.guild.channels.find("name", '✋welcome');
     .setFooter("You joined out server ", "https://i.imgur.com/IL2u3LF.png")
     channel.sendEmbed(embed);
 });
+
+
+
+
+
+
+
+
+
+
 
 
 
