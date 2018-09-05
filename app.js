@@ -104,7 +104,6 @@ client.on("message", async message => {
 
 		let messageArray = message.content.split(" ");
 		let cmd = messageArray[0];
-		let args = messageArray.slice(1);
 
 		if(cmd === `!ip`){
 			return message.channel.send("`client.connect 195.201.86.252:28416`");
