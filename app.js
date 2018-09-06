@@ -125,11 +125,17 @@ client.on("message", async message => {
 			.setAuthor("Venus Rust Server", "https://i.imgur.com/rzWmJ6X.png")
 			.setTitle("Those are all my commands")
 			.setColor(0x30bdff)
+			.addBlankField(true)
 			.addField("!ip", "Shows the Server's IP.", true)
+			.addBlankField(true)
 			.addField("!vote", "Shows the website to vote for our server.", true)
+			.addBlankField(true)
 			.addField("!wipe", "Shows when was the last wipe and when the next wipe will be.", true)
+			.addBlankField(true)
 			.addField("!website", "Shows our website.", true)
+			.addBlankField(true)
 			.addField("!steam", "Shows our Steam Group.", true)
+			.addBlankField(true)
 			.addField("!players", "Shows you the online players one the server.", true)
 			message.channel.send({embed});
 		}
