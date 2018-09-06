@@ -120,6 +120,13 @@ client.on("message", async message => {
 		if(cmd === `!steam`){
 			return message.channel.send("https://steamcommunity.com/groups/Venus-Rust");
 		}
+		if(cmd === `!help`){
+			let embed = new Discord.RichEmbed()
+			.setAuthor('Those are all my commands,')
+			.setColor('30bdff')
+			.setDescription ('`!ip` - Shows the Server's IP \n`!vote` - Shows the website to vote for our server' \n`!website` - Shows our website \n`!steam` - Shows our Steam Group \n`!players` - Shows you the online players')
+			channel.sendEmbed(embed);
+		}
 		
 		
 		let command = message.content.split(" ")[0];
@@ -127,20 +134,20 @@ client.on("message", async message => {
 		let args = message.content.split(" ").slice(1);
 		if (command === "saywelcome") {
 			if (message.member.hasPermission("ADMINISTRATOR")) {
-				const color = args[0]
-				const text = args.slice(0).join(" ");
-				let channel = client.channels.find("id", "486884048514449408");
-					if (text.length < 1) return message.channel.send("Can not announce nothing");
-					channel.send(text)
+			const color = args[0]
+			const text = args.slice(0).join(" ");
+			let channel = client.channels.find("id", "486884048514449408");
+				if (text.length < 1) return message.channel.send("Can not announce nothing");
+				channel.send(text)
 			}
 		} else
 		if (command === "sayinfo") {
 			if (message.member.hasPermission("ADMINISTRATOR")) {
-				const color = args[0]
-				const text = args.slice(0).join(" ");
-				let channel = client.channels.find("id", "486884087475470337");
-					if (text.length < 1) return message.channel.send("Can not announce nothing");
-					channel.send(text)
+			const color = args[0]
+			const text = args.slice(0).join(" ");
+			let channel = client.channels.find("id", "486884087475470337");
+				if (text.length < 1) return message.channel.send("Can not announce nothing");
+				channel.send(text)
 			}
 		} else
 		if (command === "saycommands") {
@@ -161,8 +168,8 @@ client.on("message", async message => {
 				channel.send(text)
 			}
 		} else
-	if (command === "saygeneral") {
-		if (message.member.hasPermission("ADMINISTRATOR")) {
+		if (command === "saygeneral") {
+			if (message.member.hasPermission("ADMINISTRATOR")) {
 			const color = args[0]
 			const text = args.slice(0).join(" ");
 			let channel = client.channels.find("id", "486884137006006285");
@@ -261,4 +268,3 @@ client.on("guildDelete", guild => {
 });
 
 client.login(process.env.BOT_TOKEN);
-
