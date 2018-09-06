@@ -135,7 +135,7 @@ client.on("message", async message => {
 			.addField("!players", "Shows you the online players one the server.", true)
 			message.channel.send({embed});
 		};
-	}
+	});
 		
 		
 		let command = message.content.split(" ")[0];
