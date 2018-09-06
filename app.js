@@ -124,7 +124,7 @@ client.on("message", async message => {
 			let embed = new Discord.RichEmbed()
 			.setAuthor('Those are all my commands,')
 			.setColor('30bdff')
-			.setDescription ('`!ip` - Shows the Server's IP \n`!vote` - Shows the website to vote for our server' \n`!website` - Shows our website \n`!steam` - Shows our Steam Group \n`!players` - Shows you the online players')
+			.setDescription ("`!ip` - Shows the Server's IP \n`!vote` - Shows the website to vote for our server' \n`!website` - Shows our website \n`!steam` - Shows our Steam Group \n`!players` - Shows you the online players")
 			channel.sendEmbed(embed);
 		}
 		
