@@ -123,19 +123,19 @@ client.on("message", async message => {
 		if(cmd === `!help`){
 		
 		
-			message.channel.send({embed: {
-				.setAuthor("Venus Rust Server", "https://i.imgur.com/rzWmJ6X.png")
-				.setTitle("Those are all my commands")
-				.setColor(0x30bdff)
-				.addField("!ip", "Shows the Server's IP.", true);
-				.addField("!vote", "Shows the website to vote for our server.", true);
-				.addField("!wipe", "Shows when was the last wipe and when the next wipe will be.", true);
-				.addField("!website", "Shows our website.", true);
-				.addField("!steam", "Shows our Steam Group.", true);
-				.addField("!players", "Shows you the online players one the server.", true);
-			}
-			});
-		}
+			const embed = new Discord.RichEmbed()
+			.setAuthor("Venus Rust Server", "https://i.imgur.com/rzWmJ6X.png")
+			.setTitle("Those are all my commands")
+			.setColor(0x30bdff)
+			.addField("!ip", "Shows the Server's IP.", true);
+			.addField("!vote", "Shows the website to vote for our server.", true);
+			.addField("!wipe", "Shows when was the last wipe and when the next wipe will be.", true);
+			.addField("!website", "Shows our website.", true);
+			.addField("!steam", "Shows our Steam Group.", true);
+			.addField("!players", "Shows you the online players one the server.", true);
+			message.channel.send({embed});
+		});
+	}
 		
 		
 		let command = message.content.split(" ")[0];
