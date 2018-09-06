@@ -25,9 +25,9 @@ function updateActivity() {
 					const players = server.players;
 					const maxplayers = server.players_max;
 						if(debug) console.log("Updated rust-servers.info");
-						return client.user.setPresence({ game: { name: `${players}/${maxplayers}`, type: 0 } });
+						return client.user.setPresence({ game: { name: `${players}/${maxplayers} | !help`, type: 0 } });
 						} else {
-							return client.user.setPresence({ game: { name: 'Offline', type: 0 } });
+							return client.user.setPresence({ game: { name: 'Offline | !help', type: 0 } });
 						}
 		}
 		});
@@ -125,13 +125,11 @@ client.on("message", async message => {
 			.setAuthor("Venus Rust Server", "https://i.imgur.com/rzWmJ6X.png")
 			.setTitle("Those are all my commands")
 			.setColor(0x30bdff)
-			.addBlankField(true)
 			.addField("!ip", "Shows the Server's IP.", true)
 			.addBlankField(true)
 			.addField("!vote", "Shows the website to vote for our server.", true)
 			.addBlankField(true)
 			.addField("!wipe", "Shows when was the last wipe and when the next wipe will be.", true)
-			.addBlankField(true)
 			.addField("!website", "Shows our website.", true)
 			.addBlankField(true)
 			.addField("!steam", "Shows our Steam Group.", true)
