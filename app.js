@@ -128,7 +128,35 @@ client.on("message", async message => {
 				Author: {
 					name: "Those are all my commands"
 				},
-				description: "`!ip` - Shows the Server's IP \n`!vote` - Shows the website to vote for our server' \n`!website` - Shows our website \n`!steam` - Shows our Steam Group \n`!players` - Shows you the online players",
+				fields: [{
+					name: "!ip",
+					value: "Shows the Server's IP."
+				},
+				{
+					name: "!vote",
+					value: "Shows the website to vote for our server."
+				},
+				{
+					name: "!wipe",
+					value: "Shows when was the last wipe and when the next wipe will be."
+				},
+				{
+					name: "!website",
+					value: "Shows our website."
+				},
+				{
+					name: "!steam",
+					value: "Shows our Steam Group."
+				},
+				{
+					name: "!players",
+					value: "Shows you the online players."
+				},
+				{
+					name: "!website",
+					value: "Shows our website."
+				}
+				],
 			}
 			});
 		}
