@@ -42,9 +42,9 @@ function updateActivity() {
 			const players = server.players;
 			const maxplayers = server.maxplayers;
 			if(debug) console.log("Updated rust-servers.net");
-			return client.user.setActivity(`${players}/${maxplayers}`);
+				return client.user.setActivity(`${players}/${maxplayers} | !help`);
 			} else {
-				return client.user.setActivity("Offline");
+				return client.user.setActivity(`Offline | !help`);
 			}
 		}
     });
