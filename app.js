@@ -121,6 +121,20 @@ client.on("message", async message => {
 			return message.channel.send("https://steamcommunity.com/groups/Venus-Rust");
 		}
 		if(cmd === `!help`){
+		
+		
+			message.channel.send({embed: {
+				Color30bdff,
+				Author{
+					name: "Those are all my commands"
+				},
+				description: "`!ip` - Shows the Server's IP \n`!vote` - Shows the website to vote for our server' \n`!website` - Shows our website \n`!steam` - Shows our Steam Group \n`!players` - Shows you the online players",
+			}
+			});
+			
+			
+			
+			}
 			let channel = member.guild.channels.find("name", 'rust');
 			let embed = new Discord.RichEmbed()
 			.setAuthor('Those are all my commands,')
