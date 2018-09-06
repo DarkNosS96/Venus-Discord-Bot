@@ -124,39 +124,15 @@ client.on("message", async message => {
 		
 		
 			message.channel.send({embed: {
-				Color: '30bdff',
-				Author: {
-					name: "Those are all my commands"
-				},
-				fields: [{
-					name: "!ip",
-					value: "Shows the Server's IP."
-				},
-				{
-					name: "!vote",
-					value: "Shows the website to vote for our server."
-				},
-				{
-					name: "!wipe",
-					value: "Shows when was the last wipe and when the next wipe will be."
-				},
-				{
-					name: "!website",
-					value: "Shows our website."
-				},
-				{
-					name: "!steam",
-					value: "Shows our Steam Group."
-				},
-				{
-					name: "!players",
-					value: "Shows you the online players."
-				},
-				{
-					name: "!website",
-					value: "Shows our website."
-				}
-				],
+				.setAuthor("Venus Rust Server", "https://i.imgur.com/rzWmJ6X.png")
+				.setTitle("Those are all my commands")
+				.setColor(0x30bdff)
+				.addField("!ip", "Shows the Server's IP.", true);
+				.addField("!vote", "Shows the website to vote for our server.", true);
+				.addField("!wipe", "Shows when was the last wipe and when the next wipe will be.", true);
+				.addField("!website", "Shows our website.", true);
+				.addField("!steam", "Shows our Steam Group.", true);
+				.addField("!players", "Shows you the online players one the server.", true);
 			}
 			});
 		}
