@@ -124,7 +124,7 @@ client.on("message", async message => {
 		
 		
 			message.channel.send({embed: {
-				Color30bdff,
+				Color: 30bdff,
 				Author: {
 					name: "Those are all my commands"
 				},
