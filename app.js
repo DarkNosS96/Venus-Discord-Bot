@@ -25,9 +25,9 @@ function updateActivity() {
 					const players = server.players;
 					const maxplayers = server.players_max;
 						if(debug) console.log("Updated rust-servers.info");
-						return client.user.setPresence({ game: { name: `${players}/${maxplayers} | !help`, type: 0 } });
+						return client.user.setPresence({ game: { name: `${players}/${maxplayers} || !help`, type: 0 } });
 						} else {
-							return client.user.setPresence({ game: { name: 'Offline | !help', type: 0 } });
+							return client.user.setPresence({ game: { name: 'Offline || !help', type: 0 } });
 						}
 		}
 		});
@@ -131,6 +131,7 @@ client.on("message", async message => {
 			.addBlankField(true)
 			.addField("!wipe", "Shows when was the last wipe and when the next wipe will be.", true)
 			.addField("!website", "Shows our website.", true)
+			.addBlankField(true)
 			.addBlankField(true)
 			.addField("!steam", "Shows our Steam Group.", true)
 			.addField("!players", "Shows you the online players one the server.", true)
