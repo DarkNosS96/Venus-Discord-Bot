@@ -134,7 +134,7 @@ client.on("message", async message => {
 			.addField("!steam", "Shows our Steam Group.", true)
 			.addField("!players", "Shows you the online players one the server.", true)
 			message.channel.send({embed});
-		});
+		};
 	}
 		
 		
