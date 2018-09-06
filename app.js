@@ -25,7 +25,7 @@ function updateActivity() {
 					const players = server.players;
 					const maxplayers = server.players_max;
 						if(debug) console.log("Updated rust-servers.info");
-						return client.user.setPresence({ game: { name: `${players}/${maxplayers} | !help`, type: 0 } });
+						return client.user.setPresence({ game: { name: `${players}/${maxplayers}`, type: 0 } });
 						} else {
 							return client.user.setPresence({ game: { name: 'Offline', type: 0 } });
 						}
@@ -121,8 +121,6 @@ client.on("message", async message => {
 			return message.channel.send("https://steamcommunity.com/groups/Venus-Rust");
 		}
 		if(cmd === `!help`){
-		
-		
 			const embed = new Discord.RichEmbed()
 			.setAuthor("Venus Rust Server", "https://i.imgur.com/rzWmJ6X.png")
 			.setTitle("Those are all my commands")
@@ -135,7 +133,6 @@ client.on("message", async message => {
 			.addField("!players", "Shows you the online players one the server.", true)
 			message.channel.send({embed});
 		}
-	});
 		
 		
 		let command = message.content.split(" ")[0];
@@ -143,20 +140,20 @@ client.on("message", async message => {
 		let args = message.content.split(" ").slice(1);
 		if (command === "saywelcome") {
 			if (message.member.hasPermission("ADMINISTRATOR")) {
-			const color = args[0]
-			const text = args.slice(0).join(" ");
-			let channel = client.channels.find("id", "486884048514449408");
-				if (text.length < 1) return message.channel.send("Can not announce nothing");
-				channel.send(text)
+				const color = args[0]
+				const text = args.slice(0).join(" ");
+				let channel = client.channels.find("id", "486884048514449408");
+					if (text.length < 1) return message.channel.send("Can not announce nothing");
+					channel.send(text)
 			}
 		} else
 		if (command === "sayinfo") {
 			if (message.member.hasPermission("ADMINISTRATOR")) {
-			const color = args[0]
-			const text = args.slice(0).join(" ");
-			let channel = client.channels.find("id", "486884087475470337");
-				if (text.length < 1) return message.channel.send("Can not announce nothing");
-				channel.send(text)
+				const color = args[0]
+				const text = args.slice(0).join(" ");
+				let channel = client.channels.find("id", "486884087475470337");
+					if (text.length < 1) return message.channel.send("Can not announce nothing");
+					channel.send(text)
 			}
 		} else
 		if (command === "saycommands") {
@@ -177,8 +174,8 @@ client.on("message", async message => {
 				channel.send(text)
 			}
 		} else
-		if (command === "saygeneral") {
-			if (message.member.hasPermission("ADMINISTRATOR")) {
+	if (command === "saygeneral") {
+		if (message.member.hasPermission("ADMINISTRATOR")) {
 			const color = args[0]
 			const text = args.slice(0).join(" ");
 			let channel = client.channels.find("id", "486884137006006285");
