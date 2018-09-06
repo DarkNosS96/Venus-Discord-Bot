@@ -125,7 +125,7 @@ client.on("message", async message => {
 		
 			message.channel.send({embed: {
 				Color30bdff,
-				Author{
+				Author {
 					name: "Those are all my commands"
 				},
 				description: "`!ip` - Shows the Server's IP \n`!vote` - Shows the website to vote for our server' \n`!website` - Shows our website \n`!steam` - Shows our Steam Group \n`!players` - Shows you the online players",
