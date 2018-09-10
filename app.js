@@ -120,6 +120,9 @@ client.on("message", async message => {
 		if(cmd === `!steam`){
 			return message.channel.send("https://steamcommunity.com/groups/Venus-Rust");
 		}
+		if(cmd === `!map`){
+			return message.channel.send("http://playrust.io/map/?195.201.86.252:28416");
+		}
 		if(cmd === `!help`){
 			const embed = new Discord.RichEmbed()
 			.setAuthor("Venus Rust Server", "https://i.imgur.com/rzWmJ6X.png")
@@ -135,6 +138,7 @@ client.on("message", async message => {
 			.addBlankField(true)
 			.addField("!steam", "Shows our Steam Group.", true)
 			.addBlankField(true)
+			.addField("!map", "Shows the map online.", true)
 			.addField("!players", "Shows you the online players one the server.", true)
 			message.channel.send({embed});
 		}
