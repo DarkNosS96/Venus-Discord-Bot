@@ -140,6 +140,7 @@ client.on("message", async message => {
 			.addBlankField(true)
 			.addBlankField(true)
 			.addField("!map", "Shows the map online.", true)
+			.addBlankField(true)
 			.addField("!players", "Shows you the online players one the server.", true)
 			message.channel.send({embed});
 		}
