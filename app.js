@@ -138,6 +138,7 @@ client.on("message", async message => {
 			.addBlankField(true)
 			.addField("!steam", "Shows our Steam Group.", true)
 			.addBlankField(true)
+			.addBlankField(true)
 			.addField("!map", "Shows the map online.", true)
 			.addField("!players", "Shows you the online players one the server.", true)
 			message.channel.send({embed});
