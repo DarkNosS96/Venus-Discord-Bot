@@ -120,6 +120,9 @@ client.on("message", async message => {
 		if(cmd === `!steam`){
 			return message.channel.send("https://steamcommunity.com/groups/Venus-Rust");
 		}
+		if(cmd === `!vote`){
+			return message.channel.send("https://rust-servers.net/server/145824/vote");
+		}	
 		if(cmd === `!map`){
 			return message.channel.send("http://playrust.io/map/?195.201.86.252:28416");
 		}
@@ -133,6 +136,7 @@ client.on("message", async message => {
 			.addField("!vote", "Shows the website to vote for our server.", true)
 			.addBlankField(true)
 			.addField("!wipe", "Shows when was the last wipe and when the next wipe will be.", true)
+			.addField("!vote", "Shows the website to Vote for our server and earn free gifts.", true)
 			.addField("!website", "Shows our website.", true)
 			.addBlankField(true)
 			.addBlankField(true)
