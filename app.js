@@ -115,7 +115,7 @@ client.on("message", async message => {
 			return message.channel.send("Our website is not ready yet...");
 		}
 		if(cmd === `!wipe`){
-			return message.channel.send("The last wipe was on Thu 06 Aug. The next wipe will be on Thu 13 Sep. (Weekly Wipes)");
+			return message.channel.send("The last wipe was on Thu 20 Sep. The next wipe will be on Thu 27 Sep. (Weekly Wipes)");
 		}
 		if(cmd === `!steam`){
 			return message.channel.send("https://steamcommunity.com/groups/Venus-Rust");
