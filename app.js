@@ -111,8 +111,8 @@ client.on("message", async message => {
 		if(cmd === `!vote`){
 			return message.channel.send("https://rust-servers.net/server/145824/");
 		}
-		if(cmd === `!website`){
-			return message.channel.send("Our website is not ready yet...");
+		if(cmd === `!donate`){
+			return message.channel.send("https://app.gpay.io/store/venus/8048");
 		}
 		if(cmd === `!wipe`){
 			return message.channel.send("The last wipe was on Thu 20 Sep. The next wipe will be on Thu 27 Sep. (Weekly Wipes)");
@@ -137,7 +137,7 @@ client.on("message", async message => {
 			.addBlankField(true)
 			.addField("!wipe", "Shows when was the last wipe and when the next wipe will be.", true)
 			.addField("!vote", "Shows the website to Vote for our server and earn free gifts.", true)
-			.addField("!website", "Shows our website.", true)
+			.addField("!donate", "Shows our Store.", true)
 			.addBlankField(true)
 			.addBlankField(true)
 			.addField("!steam", "Shows our Steam Group.", true)
