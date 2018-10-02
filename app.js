@@ -120,6 +120,9 @@ client.on("message", async message => {
 		if(cmd === `!steam`){
 			return message.channel.send("https://venusrust.xyz/steam");
 		}
+		if(cmd === `!website`){
+			return message.channel.send("https://venusrust.xyz");
+		}
 		if(cmd === `!map`){
 			return message.channel.send("http://venusrust.xyz/map");
 		}
