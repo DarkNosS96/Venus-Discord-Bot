@@ -109,22 +109,19 @@ client.on("message", async message => {
 			return message.channel.send("`client.connect 195.201.86.252:28416`");
 		}
 		if(cmd === `!vote`){
-			return message.channel.send("https://rust-servers.net/server/145824/");
+			return message.channel.send("https://venusrust.xyz/vote");
 		}
 		if(cmd === `!donate`){
-			return message.channel.send("https://app.gpay.io/store/venus/8048");
+			return message.channel.send("https://venusrust.xyz/store");
 		}
 		if(cmd === `!wipe`){
-			return message.channel.send("The last wipe was on Thu 20 Sep. The next wipe will be on Thu 27 Sep. (Weekly Wipes)");
+			return message.channel.send("The last wipe was on Thu 2 Oct. The next wipe will be on Thu 9 Oct. (Weekly Wipes)");
 		}
 		if(cmd === `!steam`){
-			return message.channel.send("https://steamcommunity.com/groups/Venus-Rust");
+			return message.channel.send("https://venusrust.xyz/steam");
 		}
-		if(cmd === `!vote`){
-			return message.channel.send("https://rust-servers.net/server/145824/vote");
-		}	
 		if(cmd === `!map`){
-			return message.channel.send("http://playrust.io/map/?195.201.86.252:28416");
+			return message.channel.send("http://venusrust.xyz/map");
 		}
 		if(cmd === `!help`){
 			const embed = new Discord.RichEmbed()
