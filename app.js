@@ -190,17 +190,6 @@ client.on("message", async message => {
 				channel.send(text)
 			}
 		} else
-		if (command === "saynewsph") {
-			if (message.member.hasPermission("ADMINISTRATOR")) {
-			const color = args[0]
-			const text = args.slice(0).join(" ");
-			let channel = client.channels.find("id", "486884114885246987");
-				if (text.length < 1) return message.channel.send("Can not announce nothing");
-				channel.send(text)
-				const attachment = new MessageAttachment('https://venusrust.xyz/wp-content/uploads/2018/10/week7.png');
-				message.channel.send(attachment);
-			}
-		} else
 	if (command === "saygeneral") {
 		if (message.member.hasPermission("ADMINISTRATOR")) {
 			const color = args[0]
