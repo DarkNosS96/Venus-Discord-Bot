@@ -196,7 +196,7 @@ client.on("message", async message => {
 			let channel = client.channels.find("id", "486884114885246987");
 				if (text.length < 1) return message.channel.send("Can not announce nothing");
 				channel.send(text)
-				client.sendFile(channel, attachment, name, content)
+				message.channel.send(attachment);
 			}
 		} else
 	if (command === "saygeneral") {
