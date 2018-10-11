@@ -8,6 +8,7 @@ const apiSite = process.env.apiSite || config.apiSite;
 const enableRcon = process.env.enableRcon || config.enableRcon;
 const prefix = process.env.prefix || config.prefix;
 const roles = process.env.roles || config.roles;
+const { Client, MessageAttachment } = require('discord.js');
 
 var updateInterval = (1000 * 60) * 6;
 
