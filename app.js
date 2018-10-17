@@ -206,13 +206,11 @@ client.on("message", async message => {
 			}
 		} else
 		if (command === "sayrust") {
-			if (message.member.hasPermission("ADMINISTRATOR")) {
 			const color = args[0]
 			const text = args.slice(0).join(" ");
 			let channel = client.channels.find("id", "486885181303685138");
 				if (text.length < 1) return message.channel.send("Can not announce nothing");
 				channel.send(text)
-			}
 		} else
 		if (command === "sayall") {
 		if (message.member.hasPermission("ADMINISTRATOR")) {
