@@ -127,7 +127,7 @@ client.on("message", async message => {
 			return message.channel.send("https://venusrust.xyz/map");
 		}
 		if(cmd === `!instagram`){
-			return message.channel.send("https://.venusrust.xyz/instagram");
+			return message.channel.send("https://venusrust.xyz/instagram");
 		}
 		if(cmd === `!help`){
 			const embed = new Discord.RichEmbed()
