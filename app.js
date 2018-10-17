@@ -126,6 +126,9 @@ client.on("message", async message => {
 		if(cmd === `!map`){
 			return message.channel.send("http://venusrust.xyz/map");
 		}
+		if(cmd === `!instagram`){
+			return message.channel.send("www.venusrust.xyz/instagram");
+		}
 		if(cmd === `!help`){
 			const embed = new Discord.RichEmbed()
 			.setAuthor("Venus Rust Server", "https://i.imgur.com/rzWmJ6X.png")
