@@ -106,7 +106,7 @@ client.on("message", async message => {
 		let cmd = messageArray[0];
 
 		if(cmd === `!ip`){
-			return message.channel.send("`client.connect 195.201.86.252:28416`");
+			return message.channel.send("`195.201.86.252:28416`");
 		}
 		if(cmd === `!vote`){
 			return message.channel.send("https://venusrust.xyz/vote");
@@ -124,10 +124,10 @@ client.on("message", async message => {
 			return message.channel.send("https://venusrust.xyz");
 		}
 		if(cmd === `!map`){
-			return message.channel.send("http://venusrust.xyz/map");
+			return message.channel.send("https://venusrust.xyz/map");
 		}
 		if(cmd === `!instagram`){
-			return message.channel.send("www.venusrust.xyz/instagram");
+			return message.channel.send("https://.venusrust.xyz/instagram");
 		}
 		if(cmd === `!help`){
 			const embed = new Discord.RichEmbed()
