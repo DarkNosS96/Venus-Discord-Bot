@@ -126,9 +126,6 @@ client.on("message", async message => {
 		if(cmd === `!map`){
 			return message.channel.send("https://venusrust.xyz/map");
 		}
-		if(cmd === `!instagram`){
-			return message.channel.send("https://venusrust.xyz/instagram");
-		}
 		if(cmd === `!help`){
 			const embed = new Discord.RichEmbed()
 			.setAuthor("Venus Rust Server", "https://i.imgur.com/rzWmJ6X.png")
@@ -141,7 +138,6 @@ client.on("message", async message => {
 			.addField("!donate", "Shows our Store, you can donate to support our server.", false)
 			.addField("!map", "Shows the map online.", false)
 			.addField("!players", "Shows you the online players one the server.", false)
-			.addField("!instagram", "Shows you our Instagram, Follow and check our posts for free gifts.", false)
 			message.channel.send({embed});
 		}
 		
