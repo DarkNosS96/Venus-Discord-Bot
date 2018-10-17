@@ -127,60 +127,19 @@ client.on("message", async message => {
 			return message.channel.send("http://venusrust.xyz/map");
 		}
 		if(cmd === `!help`){
-			const embed = {
-				"url": "https://discordapp.com",
-				"color": 3194367,
-			 	"author": {
-			    	"name": "Venus Rust Server",
-			    	"url": "https://venusrust.xyz",
-			    	"icon_url": "https://venusrust.xyz/wp-content/uploads/2018/10/Discord-Logo.png"
-			  	},
-			  	"fields": [
-			    		{
-				      	"name": "!ip",
-				      	"value": "Shows the Server's IP.",
-				      	"inline": false
-				    	},
-				    	{
-			      		"name": "!website",
-				      	"value": "Shows our Website.",
-				      	"inline": false
-				    	},
-				    	{
-				      	"name": "!vote",
-				      	"value": "Shows the website to Vote for our server and earn free gifts.",
-				      	"inline": false
-				    	},
-			    		{
-				      	"name": "!wipe",
-				      	"value": "Shows when was the last wipe and when the next wipe will be.",
-				      	"inline": false
-				    	},
-			    		{
-				      	"name": "!donate",
-				      	"value": "Shows our Store.",
-				      	"inline": false
-				    	},
-			    		{
-				      	"name": "!map",
-				      	"value": "Shows the map online",
-				      	"inline": false
-				    	},
-			    		{
-			      		"name": "!players",
-				      	"value": "Shows you the online players one the server",
-				      	"inline": false
-				    	},
-				    	{
-			      		"name": "!instagram",
-				      	"value": "Shows you our Instagram, Follow and check our posts for free gifts.",
-				      	"inline": false
-				    	}
-				]
-			};
-			channel.send("Those are all my commands.", { embed });
-			
-			
+			const embed = new Discord.RichEmbed()
+			.setAuthor("Venus Rust Server", "https://i.imgur.com/rzWmJ6X.png")
+			.setTitle("Those are all my commands")
+			.setColor(0x30bdff)
+			.addField("!ip", "Shows the Server's IP.", false)
+			.addField("!website", "Shows our Website.", false)
+			.addField("!vote", "Shows the website to Vote for our server and earn free gifts.", false)
+			.addField("!wipe", "Shows when was the last wipe and when the next wipe will be.", false)
+			.addField("!donate", "Shows our Store, you can donate to support our server.", false)
+			.addField("!map", "Shows the map online.", false)
+			.addField("!players", "Shows you the online players one the server.", false)
+			.addField("!instagram", "Shows you our Instagram, Follow and check our posts for free gifts.", false)
+			message.channel.send({embed});
 		}
 		
 		
