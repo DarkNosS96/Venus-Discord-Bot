@@ -1,7 +1,6 @@
 const Discord = require("discord.js");
 const request = require('request');
 const config = require("./config.json");
-const promo = require("./promocodes.json");
 const rcon = require("./rcon/app.js");
 const debug = process.env.debug || config.debug;
 const apiUrl = process.env.apiUrl || config.apiUrl; 
