@@ -136,6 +136,7 @@ client.on("message", async message => {
 			.addField("!vote", "Shows the website to Vote for our server and earn free gifts.", false)
 			.addField("!wipe", "Shows when was the last wipe and when the next wipe will be.", false)
 			.addField("!donate", "Shows our Store, you can donate to support our server.", false)
+			.addField("!steam", "Shows our Steam Group.", false)
 			.addField("!map", "Shows the map online.", false)
 			.addField("!players", "Shows you the online players one the server.", false)
 			message.channel.send({embed});
