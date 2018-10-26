@@ -109,22 +109,22 @@ client.on("message", async message => {
 			return message.channel.send("`195.201.86.252:28416`");
 		}
 		if(cmd === `!vote`){
-			return message.channel.send("https://venusrust.xyz/vote");
+			return message.channel.send("https://venusrust.eu/vote");
 		}
 		if(cmd === `!donate`){
-			return message.channel.send("https://venusrust.xyz/store");
+			return message.channel.send("https://venusrust.eu/store");
 		}
 		if(cmd === `!wipe`){
 			return message.channel.send("The last wipe was on **Thu 18 Oct**. The next wipe will be on **Thu 25 Oct**. (Around 19:00 CET.)");
 		}
 		if(cmd === `!steam`){
-			return message.channel.send("https://venusrust.xyz/steam");
+			return message.channel.send("https://venusrust.eu/steam");
 		}
 		if(cmd === `!website`){
-			return message.channel.send("https://venusrust.xyz");
+			return message.channel.send("https://venusrust.eu");
 		}
 		if(cmd === `!map`){
-			return message.channel.send("https://venusrust.xyz/map");
+			return message.channel.send("https://venusrust.eu/map");
 		}
 		if(cmd === `!help`){
 			const embed = new Discord.RichEmbed()
