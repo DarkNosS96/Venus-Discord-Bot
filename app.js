@@ -208,7 +208,7 @@ client.on("message", async message => {
 		if (command === "saypromo") {
 			const color = args[0]
 			const text = args.slice(0).join(" ");
-			let channel = client.channels.find("id", "486885181303685138");
+			let channel = client.channels.find("id", "507339579439972382");
 				if (text.length < 1) return message.channel.send("Can not announce nothing");
 				channel.send(text)
 		} else
