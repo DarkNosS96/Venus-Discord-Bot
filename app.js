@@ -198,6 +198,15 @@ client.on("message", async message => {
 				channel.send(text)
 			}
 		} else
+		if (command === "saysuggestions2") {
+		if (message.member.hasPermission("ADMINISTRATOR")) {
+			const color = args[0]
+			const text = args.slice(0).join(" ");
+			let channel = client.channels.find("id", "508057785590874132");
+				if (text.length < 1) return message.channel.send("Can not announce nothing");
+				channel.send(text)
+			}
+		} else
 		if (command === "sayrust") {
 			const color = args[0]
 			const text = args.slice(0).join(" ");
