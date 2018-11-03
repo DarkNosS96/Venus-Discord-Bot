@@ -194,8 +194,10 @@ client.on("message", async message => {
 			const color = args[0]
 			const text = args.slice(0).join(" ");
 			let channel = client.channels.find("id", "486884158589894669");
+			let channel2 = client.channels.find("id", "486886635771002880");
 				if (text.length < 1) return message.channel.send("Can not announce nothing");
-				channel.send(text)
+				channel.send(text);
+				channel2.send("!com say New suggestion added in our Discord www.venusrust.eu/discord Check it and vote!");
 			}
 		} else
 		if (command === "saysuggestions2") {
