@@ -26,9 +26,9 @@ function updateActivity() {
 					const players = server.players;
 					const maxplayers = server.players_max;
 						if(debug) console.log("Updated rust-servers.info");
-						return client.user.setPresence({ game: { name: `${players}/${maxplayers} Players | !help`, type: 0 } });
+						return client.user.setPresence({ game: { name: `${players}/${maxplayers} Players | !helpme`, type: 0 } });
 						} else {
-							return client.user.setPresence({ game: { name: 'Offline | !help', type: 0 } });
+							return client.user.setPresence({ game: { name: 'Offline | !helpme', type: 0 } });
 						}
 		}
 		});
@@ -43,9 +43,9 @@ function updateActivity() {
 			const players = server.players;
 			const maxplayers = server.maxplayers;
 			if(debug) console.log("Updated rust-servers.net");
-				return client.user.setActivity(`${players}/${maxplayers} | !help`);
+				return client.user.setActivity(`${players}/${maxplayers} | !helpme`);
 			} else {
-				return client.user.setActivity(`Offline | !help`);
+				return client.user.setActivity(`Offline | !helpme`);
 			}
 		}
     });
@@ -115,7 +115,7 @@ client.on("message", async message => {
 			return message.channel.send("https://venusrust.eu/store");
 		}
 		if(cmd === `!wipe`){
-			return message.channel.send("The last wipe was on **Thu 1 Nov **. The next wipe will be on **Thu 8 Nov**. (Around 19:00 CET.)");
+			return message.channel.send("The last wipe was on **Thu 22 Nov **. The next wipe will be on **Thu 29 Nov**. (Around 19:00 CET.)");
 		}
 		if(cmd === `!steam`){
 			return message.channel.send("https://venusrust.eu/steam");
@@ -126,7 +126,7 @@ client.on("message", async message => {
 		if(cmd === `!map`){
 			return message.channel.send("https://venusrust.eu/map");
 		}
-		if(cmd === `!help`){
+		if(cmd === `!helpme`){
 			const embed = new Discord.RichEmbed()
 			.setAuthor("Venus Rust Server", "https://i.imgur.com/rzWmJ6X.png")
 			.setTitle("Those are all my commands")
