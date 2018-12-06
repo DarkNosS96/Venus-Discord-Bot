@@ -117,7 +117,7 @@ client.on("message", async message => {
 		if(cmd === `!vote`){
 			return message.channel.send("https://venusrust.eu/vote");
 		}
-		if(cmd === `!donate`){
+		if(cmd === `!store`){
 			return message.channel.send("https://venusrust.eu/store");
 		}
 		if(cmd === `!wipe`){
@@ -141,7 +141,7 @@ client.on("message", async message => {
 			.addField("!website", "Shows our Website.", false)
 			.addField("!vote", "Shows the website to Vote for our server and earn free gifts.", false)
 			.addField("!wipe", "Shows when was the last wipe and when the next wipe will be.", false)
-			.addField("!donate", "Shows our Store, you can donate to support our server.", false)
+			.addField("!store", "Shows our Store, you can donate to support our server.", false)
 			.addField("!steam", "Shows our Steam Group.", false)
 			.addField("!map", "Shows the map online.", false)
 			.addField("!players", "Shows you the online players one the server.", false)
