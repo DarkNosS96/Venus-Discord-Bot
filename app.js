@@ -100,7 +100,14 @@ if (enableRcon == 1)
   
   
 client.on("message", async message => {
-		if(message.channel.type === "dm") return;
+		if(message.channel.type === "dm")
+		let channel = client.channels.find("id", "520193075104972810");
+		return message.channel.send("Can not announce nothing");
+		channel.send(text)
+	
+	
+	
+	
 
 		let messageArray = message.content.split(" ");
 		let cmd = messageArray[0];
