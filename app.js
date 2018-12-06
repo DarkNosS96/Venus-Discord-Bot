@@ -100,11 +100,11 @@ if (enableRcon == 1)
   
   
 client.on("message", async message => {
-		if(message.channel.type === "dm"){
-		let channel = client.channels.find("id", "520193075104972810");
-		const text = args.slice(0).join(" ");
-		channel.send(text)
-		}
+	if (message.channel.type === "dm") {
+	let channel = client.channels.find("id", "520193075104972810");
+	const text = args.slice(0).join(" ");
+	channel.send(text)
+	}
 	
 	
 	
