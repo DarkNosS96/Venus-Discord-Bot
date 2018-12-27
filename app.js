@@ -121,7 +121,7 @@ client.on("message", async message => {
 			return message.channel.send("https://venusrust.eu/store");
 		}
 		if(cmd === `!wipe`){
-			return message.channel.send("The last wipe was on **Thu 29 Nov **. The next wipe will be on **Thu 6 Dec**. (Around 19:00 CET.)");
+			return message.channel.send("The last wipe was on **Thu 27 Dec **. The next wipe will be on **Thu 3 Jan**. (Around 19:00 CET.)");
 		}
 		if(cmd === `!steam`){
 			return message.channel.send("https://venusrust.eu/steam");
