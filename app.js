@@ -276,7 +276,7 @@ let channel = member.guild.channels.find("name", '✋welcome');
     .setImage('https://i.imgur.com/z9pih7T.png')
   	.setDescription (member + '\n\nNeed help? Check ' + info + ' and ' + commands + ' or ask a staff member. Do not forget to have fun!')
     .setTimestamp()
-    .setFooter("You joined out server ", "https://i.imgur.com/IL2u3LF.png")
+    .setFooter("You joined our server ", "https://i.imgur.com/IL2u3LF.png")
     channel.sendEmbed(embed);
 });
 
