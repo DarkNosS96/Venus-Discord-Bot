@@ -269,20 +269,13 @@ client.on("message", async message => {
 });
 
 client.on("guildMemberAdd", (member) => {
-let serverid = client.guilds.get(message.guild.id).id;
-if(serverid === `485171202583691264`){
-	let info = client.channels.find("id", "486884087475470337");
-	let commands = client.channels.find("id", "486884105661972480");
+	let info = client.channels.find("name", "📰info");
+	let commands = client.channels.find("name", "❗commands");
 	let guild = member.guild; // Reading property `guild` of guildmember object.
 	let memberTag = member.user.tag;
 	let avatar = member.user.displayAvatarURL;
 	let channel = member.guild.channels.find("name", '✋welcome');
-} else {
-	let guild = member.guild; // Reading property `guild` of guildmember object.
-	let memberTag = member.user.tag;
-	let avatar = member.user.displayAvatarURL;
-	let channel = member.guild.channels.find("name", '✋welcome');
-}
+
 if (!channel) return;
 	let embed = new Discord.RichEmbed()
 	.setAuthor('Hello and welcome to Venus Rust Server')
