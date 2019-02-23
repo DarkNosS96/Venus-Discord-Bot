@@ -269,35 +269,31 @@ client.on("message", async message => {
 });
 
 client.on("guildMemberAdd", (member) => {
-let info = client.channels.find("id", "486884087475470337");
-let commands = client.channels.find("id", "486884105661972480");
-let guild = member.guild; // Reading property `guild` of guildmember object.
-let memberTag = member.user.tag;
-let avatar = member.user.displayAvatarURL;
-let channel = member.guild.channels.find("name", '✋welcome');
 let serverid = client.guilds.get(message.guild.id).id;
 if(serverid === `485171202583691264`){
-		if (!channel) return;
-		let embed = new Discord.RichEmbed()
-		.setAuthor('Hello and welcome to Venus Rust Server')
-		.setColor('RANDOM')
-		.setThumbnail(avatar)
-		.setImage('https://i.imgur.com/z9pih7T.png')
-		.setDescription (member + '\n\nNeed help? Check ' + info + ' and ' + commands + ' or ask a staff member. Do not forget to have fun!')
-		.setTimestamp()
-		.setFooter("You joined our server ", "https://i.imgur.com/IL2u3LF.png")
-		channel.sendEmbed(embed);
-	} else {
-		if (!channel) return;
-		let embed = new Discord.RichEmbed()
-		.setAuthor('Hello and welcome Insomnia s Squad')
-		.setColor('RANDOM')
-		.setThumbnail(avatar)
-		.setImage('https://i.imgur.com/z9pih7T.png')
-		.setDescription (member + '\n\nNeed help? Check ' + info + ' and ' + commands + ' or ask a staff member. Do not forget to have fun!')
-		.setTimestamp()
-		channel.sendEmbed(embed);
-	}
+	let info = client.channels.find("id", "486884087475470337");
+	let commands = client.channels.find("id", "486884105661972480");
+	let guild = member.guild; // Reading property `guild` of guildmember object.
+	let memberTag = member.user.tag;
+	let avatar = member.user.displayAvatarURL;
+	let channel = member.guild.channels.find("name", '✋welcome');
+} else {
+	let guild = member.guild; // Reading property `guild` of guildmember object.
+	let memberTag = member.user.tag;
+	let avatar = member.user.displayAvatarURL;
+	let channel = member.guild.channels.find("name", '✋welcome');
+}
+if (!channel) return;
+	let embed = new Discord.RichEmbed()
+	.setAuthor('Hello and welcome to Venus Rust Server')
+	.setColor('RANDOM')
+	.setThumbnail(avatar)
+	.setImage('https://i.imgur.com/z9pih7T.png')
+	.setDescription (member + '\n\nNeed help? Check ' + info + ' and ' + commands + ' or ask a staff member. Do not forget to have fun!')
+	.setTimestamp()
+	.setFooter("You joined our server ", "https://i.imgur.com/IL2u3LF.png")
+	channel.sendEmbed(embed);
+} 
 
 });
 
