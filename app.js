@@ -293,8 +293,6 @@ if (!channel) return;
 	.setTimestamp()
 	.setFooter("You joined our server ", "https://i.imgur.com/IL2u3LF.png")
 	channel.sendEmbed(embed);
-} 
-
 });
 
 client.on("guildCreate", guild => {
