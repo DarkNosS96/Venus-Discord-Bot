@@ -132,6 +132,9 @@ client.on("message", async message => {
 		if(cmd === `!map`){
 			return message.channel.send("https://venusrust.eu/map");
 		}
+		if(cmd === `!aaa`){
+			client.guilds.get("the guild id");
+		}
 		if(cmd === `!helpme`){
 			const embed = new Discord.RichEmbed()
 			.setAuthor("Venus Rust Server", "https://i.imgur.com/rzWmJ6X.png")
