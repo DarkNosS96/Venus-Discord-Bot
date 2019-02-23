@@ -269,26 +269,32 @@ client.on("message", async message => {
 });
 
 client.on("guildMemberAdd", (member) => {
+
+let serverid = guild.id;
+if(serverid === `485171202583691264`) {
 	let info = client.channels.find("name", "📰info");
 	let commands = client.channels.find("name", "❗commands");
 	let guild = member.guild; // Reading property `guild` of guildmember object.
 	let memberTag = member.user.tag;
 	let avatar = member.user.displayAvatarURL;
 	let channel = member.guild.channels.find("name", '✋welcome');
-
-if (!channel) return;
-let serverid = guild.id;
-	if(serverid === `485171202583691264`) {
+	if (!channel) return;
 		let embed = new Discord.RichEmbed()
 		.setAuthor('Hello and welcome to Venus Rust Server')
 		.setColor('RANDOM')
 		.setThumbnail(avatar)
 		.setImage('https://i.imgur.com/z9pih7T.png')
-		.setDescription (member + '\n\nNeed help? Check and or ask a staff member. Do not forget to have fun!')
+		.setDescription (member + '\n\nNeed help? Check '+ info +' and '+ commands +' or ask a staff member. Do not forget to have fun!')
 		.setTimestamp()
 		.setFooter("You joined our server ", "https://i.imgur.com/IL2u3LF.png")
 		channel.sendEmbed(embed);
 	} else {
+
+	let guild = member.guild; // Reading property `guild` of guildmember object.
+	let memberTag = member.user.tag;
+	let avatar = member.user.displayAvatarURL;
+	let channel = member.guild.channels.find("name", 'welcome');
+	if (!channel) return;
 		let embed = new Discord.RichEmbed()
 		.setAuthor('Hello and welcome to Venus Rust Server')
 		.setColor('RANDOM')
