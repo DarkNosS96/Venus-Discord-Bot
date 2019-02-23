@@ -277,8 +277,8 @@ client.on("guildMemberAdd", (member) => {
 	let channel = member.guild.channels.find("name", '✋welcome');
 
 if (!channel) return;
-let serveridid = client.guild.id;
-	if(serveridid === `485171202583691264`) {
+let serverid = client.guild.id;
+	if(serverid === `485171202583691264`) {
 		let embed = new Discord.RichEmbed()
 		.setAuthor('Hello and welcome to Venus Rust Server')
 		.setColor('RANDOM')
