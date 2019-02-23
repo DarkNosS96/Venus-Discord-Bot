@@ -170,7 +170,7 @@ client.on("message", async message => {
 			}
 		} else
 		if (command === "sayinfo") {
-			let userID = '<@294463603157893121>'
+			let userID = '<@294463603157893121>';
 			if (!message.author === userID) {
 				const color = args[0]
 				const text = args.slice(0).join(" ");
