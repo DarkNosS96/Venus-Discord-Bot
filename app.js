@@ -269,12 +269,11 @@ client.on("message", async message => {
 });
 
 client.on("guildMemberAdd", (member) => {
-
+let guild = member.guild; // Reading property `guild` of guildmember object.
 let serverid = guild.id;
 if(serverid === `485171202583691264`) {
 	let info = client.channels.find("name", "📰info");
 	let commands = client.channels.find("name", "❗commands");
-	let guild = member.guild; // Reading property `guild` of guildmember object.
 	let memberTag = member.user.tag;
 	let avatar = member.user.displayAvatarURL;
 	let channel = member.guild.channels.find("name", '✋welcome');
@@ -289,8 +288,6 @@ if(serverid === `485171202583691264`) {
 		.setFooter("You joined our server ", "https://i.imgur.com/IL2u3LF.png")
 		channel.sendEmbed(embed);
 	} else {
-
-	let guild = member.guild; // Reading property `guild` of guildmember object.
 	let memberTag = member.user.tag;
 	let avatar = member.user.displayAvatarURL;
 	let channel = member.guild.channels.find("name", 'welcome');
