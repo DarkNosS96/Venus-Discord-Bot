@@ -268,60 +268,38 @@ client.on("message", async message => {
 		}	
 });
 
-let serverid2 = client.guilds.get(message.guild.id).id;
-if(serverid2 === `485171202583691264`){
-	client.on("guildMemberAdd", (member) => {
-	let info = member.guild.channels.find("name", '📰info');
-	let commands = member.guild.channels.find("name", '❗commands');
-	let guild = member.guild; // Reading property `guild` of guildmember object.
-	let memberTag = member.user.tag;
-	let avatar = member.user.displayAvatarURL;
-	let channel = member.guild.channels.find("name", '✋welcome');
-	if (!channel) return;
+client.on("guildMemberAdd", (member) => {
+let info = member.guild.channels.find("name", '📰info');
+let commands = member.guild.channels.find("name", '❗commands');
+let guild = member.guild; // Reading property `guild` of guildmember object.
+let memberTag = member.user.tag;
+let avatar = member.user.displayAvatarURL;
+let channel = member.guild.channels.find("name", '✋welcome');
+let serverid = client.guilds.get(message.guild.id).id;
+if(serverid === `485171202583691264`){
+		if (!channel) return;
 		let embed = new Discord.RichEmbed()
-    		.setAuthor('Hello and welcome to Venus Rust Server')
-  		.setColor('RANDOM')
-    		.setThumbnail(avatar)
-    		.setImage('https://i.imgur.com/z9pih7T.png')
-  		.setDescription (member + '\n\nNeed help? Check ' + info + ' and ' + commands + ' or ask a staff member. Do not forget to have fun!')
-    		.setTimestamp()
-    		.setFooter("You joined our server ", "https://i.imgur.com/IL2u3LF.png")
-    		channel.sendEmbed(embed);
-	});			
+		.setAuthor('Hello and welcome to Venus Rust Server')
+		.setColor('RANDOM')
+		.setThumbnail(avatar)
+		.setImage('https://i.imgur.com/z9pih7T.png')
+		.setDescription (member + '\n\nNeed help? Check ' + info + ' and ' + commands + ' or ask a staff member. Do not forget to have fun!')
+		.setTimestamp()
+		.setFooter("You joined our server ", "https://i.imgur.com/IL2u3LF.png")
+		channel.sendEmbed(embed);
 	} else {
-	client.on("guildMemberAdd", (member) => {
-	let info = member.guild.channels.find("name", '📰info');
-	let commands = member.guild.channels.find("name", '❗commands');
-	let guild = member.guild; // Reading property `guild` of guildmember object.
-	let memberTag = member.user.tag;
-	let avatar = member.user.displayAvatarURL;
-	let channel = member.guild.channels.find("name", '✋welcome');
-	if (!channel) return;
-    		let embed = new Discord.RichEmbed()
-    		.setAuthor('Hello and welcome to Venus Rust Server')
-  		.setColor('RANDOM')
-    		.setThumbnail(avatar)
-  		.setDescription (member + '\n\nNeed help? Check ' + info + ' and ' + commands + ' or ask a staff member. Do not forget to have fun!')
-    		.setTimestamp()
-    		.setFooter("You joined our server ", "https://i.imgur.com/IL2u3LF.png")
-    		channel.sendEmbed(embed);
-	});
-}
+		if (!channel) return;
+		let embed = new Discord.RichEmbed()
+		.setAuthor('Hello and welcome Insomnia s Squad')
+		.setColor('RANDOM')
+		.setThumbnail(avatar)
+		.setImage('https://i.imgur.com/z9pih7T.png')
+		.setDescription (member + '\n\nNeed help? Check ' + info + ' and ' + commands + ' or ask a staff member. Do not forget to have fun!')
+		.setTimestamp()
+		channel.sendEmbed(embed);
+	}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+});
 
 client.on("guildCreate", guild => {
   console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
