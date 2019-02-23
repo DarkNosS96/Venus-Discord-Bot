@@ -137,7 +137,7 @@ client.on("message", async message => {
 			if(serverid === `485171202583691264`){
 				return message.channel.send("mplaaa");
 			} else {
-				return message.channel.send("test test");
+				return message.channel.send("test test test");
 			}
 		}
 		if(cmd === `!helpme`){
