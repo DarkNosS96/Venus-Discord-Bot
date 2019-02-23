@@ -293,12 +293,10 @@ if(serverid === `485171202583691264`) {
 	let channel = member.guild.channels.find("name", 'welcome');
 	if (!channel) return;
 		let embed = new Discord.RichEmbed()
-		.setAuthor('Hello and welcome to Venus Rust Server')
+		.setAuthor("Γεια σου και καλώς ήρθες στον Insomnia’s Squad Server")
 		.setColor('RANDOM')
 		.setThumbnail(avatar)
-		.setDescription (member + '\n\nNeed help? Check and or ask a staff member. Do not forget to have fun!')
-		.setTimestamp()
-		.setFooter("You joined our server ", "https://i.imgur.com/IL2u3LF.png")
+		.setDescription (member + '\n\nΜη ξεχάσεις να τσεκάρεις #rules και ό,τι βοήθεια χρειαστείς ρώτα κάποιον Admin. \nΜη ξεχάσεις να περάσεις καλά κολλητέ!!')
 		channel.sendEmbed(embed);
 	}
 });
