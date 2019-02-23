@@ -133,7 +133,7 @@ client.on("message", async message => {
 			return message.channel.send("https://venusrust.eu/map");
 		}
 		if(cmd === `!aaa`){
-			let serverid = client.guilds.get("485171202583691264");
+			let serverid = client.guilds.get(message.guild.id).id;
 			if(serverid === `485171202583691264`){
 				return message.channel.send("mplaaa");
 			} else {
