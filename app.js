@@ -269,8 +269,8 @@ client.on("message", async message => {
 });
 
 client.on("guildMemberAdd", (member) => {
-let info = member.guild.channels.find("name", '📰info');
-let commands = member.guild.channels.find("name", '❗commands');
+let info = client.channels.find("id", "486884087475470337");
+let commands = client.channels.find("id", "486884105661972480");
 let guild = member.guild; // Reading property `guild` of guildmember object.
 let memberTag = member.user.tag;
 let avatar = member.user.displayAvatarURL;
