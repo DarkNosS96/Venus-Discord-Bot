@@ -171,7 +171,7 @@ client.on("message", async message => {
 		} else
 		if (command === "sayinfo") {
 			const userID = '<@294463603157893121>'
-			if (!message.author === userID) {
+			if (message.author === userID) {
 				const color = args[0]
 				const text = args.slice(0).join(" ");
 				let channel = client.channels.find("id", "486884087475470337");
