@@ -291,13 +291,14 @@ if(serverid === `485171202583691264`) {
 	let memberTag = member.user.tag;
 	let avatar = member.user.displayAvatarURL;
 	let rules = client.channels.find("name", "rules");
+	let help = client.channels.find("name", "help");
 	let channel = member.guild.channels.find("name", 'welcome');
 	if (!channel) return;
 		let embed = new Discord.RichEmbed()
 		.setAuthor("Γεια σου και καλώς ήρθες στον Insomnia’s Squad Server")
 		.setColor('RANDOM')
 		.setThumbnail(avatar)
-		.setDescription (member + '\n\nΜη ξεχάσεις να τσεκάρεις '+ rules +' και ό,τι βοήθεια χρειαστείς ρώτα κάποιον Admin. \nΜη ξεχάσεις να περάσεις καλά κολλητέ!!')
+		.setDescription (member + '\n\nΜη ξεχάσεις να τσεκάρεις '+ help +' και '+ rules +' ό,τι βοήθεια χρειαστείς ρώτα κάποιον Admin. \nΜη ξεχάσεις να περάσεις καλά κολλητέ!!')
 		channel.sendEmbed(embed);
 	}
 });
