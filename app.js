@@ -11,6 +11,9 @@ const roles = process.env.roles || config.roles;
 const { Client, MessageAttachment } = require('discord.js');
 const fs = require("fs");
 
+var updateInterval = (1000 * 60) * 6;
+const client = new Discord.Client();
+
 let channels;
 let data = null;
 let voiceLogChannel = "";
@@ -92,9 +95,6 @@ readdata();
 
 
 
-var updateInterval = (1000 * 60) * 6;
-
-const client = new Discord.Client();
 
 function updateActivity() {
 	if(apiSite == 1) {
