@@ -216,7 +216,7 @@ client.on("message", async message => {
 		if(cmd === `!aaa`){
 			let serverid = client.guilds.get(message.guild.id).id;
 			if(serverid === `485171202583691264`){
-				return message.channel.send("mplaaa");
+				return message.channel.send("mplaaaaaaaaa");
 			} else {
 				return message.channel.send("test test test");
 			}
