@@ -49,6 +49,8 @@ client.on('channelDelete', (channel) => {
 let readdata = function () {
 	data = JSON.parse(fs.readFileSync("data.json"));
 	token = process.env.BOT_TOKEN;
+	prefix = process.env.prefix || config.prefix;
+
 }
 
 let writedata = function () {
