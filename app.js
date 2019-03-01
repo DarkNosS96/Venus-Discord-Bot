@@ -14,6 +14,7 @@ const fs = require("fs");
 let channels;
 let data = null;
 let voiceLogChannel = "";
+let prefix = "";
 
 client.on('voiceStateUpdate', (oldMember, newMember) => {
 	// Check if voiceLogChannel has been set
