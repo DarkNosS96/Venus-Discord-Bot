@@ -9,33 +9,9 @@ const enableRcon = process.env.enableRcon || config.enableRcon;
 const prefix = process.env.prefix || config.prefix;
 const roles = process.env.roles || config.roles;
 const { Client, MessageAttachment } = require('discord.js');
-const fs = require("fs");
 
 var updateInterval = (1000 * 60) * 6;
 const client = new Discord.Client();
-
-client.on('voiceStateUpdate', (oldMember, newMember) => {
-  let newUserChannel = newMember.voiceChannel
-  let oldUserChannel = oldMember.voiceChannel
-
-
-  if(!oldUserChannel && newUserChannel) {
-
-    client.channels.get('551177078767222835').send("User went form Channel" + oldUserChannel.name + "to the new" 
-           + newUserChannel.name + "Channel");
-
-  }
-})
-
-
-
-
-
-
-
-
-
-
 
 function updateActivity() {
 	if(apiSite == 1) {
