@@ -17,6 +17,7 @@ const client = new Discord.Client();
 let channels;
 let data = null;
 let voiceLogChannel = "";
+let prefixx = "";
 
 client.on('voiceStateUpdate', (oldMember, newMember) => {
 	// Check if voiceLogChannel has been set
@@ -49,7 +50,7 @@ client.on('channelDelete', (channel) => {
 let readdata = function () {
 	data = JSON.parse(fs.readFileSync("data.json"));
 	token = process.env.BOT_TOKEN;
-	prefix = process.env.prefix || config.prefix;
+	prefixx = data.prefixx;
 
 }
 
