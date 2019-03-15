@@ -57,10 +57,6 @@ client.on("ready", () => {
 	setInterval(function () {
     updateActivity();
 	}, updateInterval);
-	
-	
-	let channel = client.channels.find("id", "486886635771002880");
-	channel.send(text)
 });
 
 if (enableRcon == 1)
