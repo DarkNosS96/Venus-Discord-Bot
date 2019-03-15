@@ -57,6 +57,10 @@ client.on("ready", () => {
 	setInterval(function () {
     updateActivity();
 	}, updateInterval);
+	
+	
+	let channel = client.channels.find("id", "486886635771002880");
+	channel.send(text)
 });
 
 if (enableRcon == 1)
@@ -173,6 +177,15 @@ client.on("message", async message => {
 				const color = args[0]
 				const text = args.slice(0).join(" ");
 				let channel = client.channels.find("id", "486884087475470337");
+					if (text.length < 1) return message.channel.send("Can not announce nothing");
+					channel.send(text)
+			}
+		} else
+		if (command === "saydonate") {
+			if (message.member.hasPermission("ADMINISTRATOR")) {
+				const color = args[0]
+				const text = args.slice(0).join(" ");
+				let channel = client.channels.find("id", "555984660103036928");
 					if (text.length < 1) return message.channel.send("Can not announce nothing");
 					channel.send(text)
 			}
