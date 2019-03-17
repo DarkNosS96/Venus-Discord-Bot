@@ -238,7 +238,7 @@ if(message.channel.id === "556689567579766799"){
 	if (command === "sayadmin") {
 		const color = args[0]
 		const text = args.slice(0).join(" ");
-		let channel = client.channels.find("id", "485176392921645087");
+		let channel = client.channels.find("id", "486886635771002880");
 		if (text.length < 1) return message.channel.send("Can not announce nothing");
 			channel.send("@everyone")
 			channel.send(text)
