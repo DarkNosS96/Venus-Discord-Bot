@@ -102,179 +102,155 @@ client.on("message", async message => {
 	if (message.channel.type === "dm") {
 	let channel = client.channels.find("id", "520193075104972810");
 	channel.send("[" + message.author.username + "]: " + message.content) //Message from : Message
+}
+let messageArray = message.content.split(" ");
+let cmd = messageArray[0];
+if(cmd === `!ip`){
+	return message.channel.send("`195.201.86.252:28416`");
+}
+if(cmd === `!vote`){
+	return message.channel.send("https://venusrust.eu/vote");
+}
+if(cmd === `!store`){
+	return message.channel.send("https://venusrust.eu/store");
+}
+if(cmd === `!wipe`){
+	return message.channel.send("The last wipe was on **Thu 14 Mar **. The next wipe will be on **Thu 21 Mar**. (Around 19:00 CET.)");
+}
+if(cmd === `!steam`){
+	return message.channel.send("https://venusrust.eu/steam");
+}
+if(cmd === `!website`){
+	return message.channel.send("https://venusrust.eu");
+}
+if(cmd === `!map`){
+	return message.channel.send("https://venusrust.eu/map");
+}
+if(cmd === `!aaa`){
+	let serverid = client.guilds.get(message.guild.id).id;
+	if(serverid === `485171202583691264`){
+		return message.channel.send("mplaaaaaaaaa");
+	} else {
+		return message.channel.send("test test test");
 	}
+}
+if(cmd === `!helpme`){
+	const embed = new Discord.RichEmbed()
+	.setAuthor("Venus Rust Server", "https://i.imgur.com/rzWmJ6X.png")
+	.setTitle("Those are all my commands")
+	.setColor(0x30bdff)
+	.addField("!ip", "Shows the Server's IP.", false)
+	.addField("!website", "Shows our Website.", false)
+	.addField("!vote", "Shows the website to Vote for our server and earn free gifts.", false)
+	.addField("!wipe", "Shows when was the last wipe and when the next wipe will be.", false)
+	.addField("!store", "Shows our Store, you can donate to support our server.", false)
+	.addField("!steam", "Shows our Steam Group.", false)
+	.addField("!map", "Shows the map online.", false)
+	.addField("!players", "Shows you the online players one the server.", false)
+	message.channel.send({embed});
+}
 	
 	
-	
-
-		let messageArray = message.content.split(" ");
-		let cmd = messageArray[0];
-
-		if(cmd === `!ip`){
-			return message.channel.send("`195.201.86.252:28416`");
-		}
-		if(cmd === `!vote`){
-			return message.channel.send("https://venusrust.eu/vote");
-		}
-		if(cmd === `!store`){
-			return message.channel.send("https://venusrust.eu/store");
-		}
-		if(cmd === `!wipe`){
-			return message.channel.send("The last wipe was on **Thu 14 Mar **. The next wipe will be on **Thu 21 Mar**. (Around 19:00 CET.)");
-		}
-		if(cmd === `!steam`){
-			return message.channel.send("https://venusrust.eu/steam");
-		}
-		if(cmd === `!website`){
-			return message.channel.send("https://venusrust.eu");
-		}
-		if(cmd === `!map`){
-			return message.channel.send("https://venusrust.eu/map");
-		}
-		if(cmd === `!aaa`){
-			let serverid = client.guilds.get(message.guild.id).id;
-			if(serverid === `485171202583691264`){
-				return message.channel.send("mplaaaaaaaaa");
-			} else {
-				return message.channel.send("test test test");
-			}
-		}
-		if(cmd === `!helpme`){
-			const embed = new Discord.RichEmbed()
-			.setAuthor("Venus Rust Server", "https://i.imgur.com/rzWmJ6X.png")
-			.setTitle("Those are all my commands")
-			.setColor(0x30bdff)
-			.addField("!ip", "Shows the Server's IP.", false)
-			.addField("!website", "Shows our Website.", false)
-			.addField("!vote", "Shows the website to Vote for our server and earn free gifts.", false)
-			.addField("!wipe", "Shows when was the last wipe and when the next wipe will be.", false)
-			.addField("!store", "Shows our Store, you can donate to support our server.", false)
-			.addField("!steam", "Shows our Steam Group.", false)
-			.addField("!map", "Shows the map online.", false)
-			.addField("!players", "Shows you the online players one the server.", false)
-			message.channel.send({embed});
-		}
-		
-		if(message.channel.id === "556689567579766799"){
-		let command = message.content.split(" ")[0];
-		command = command.slice(prefix.length);
-		let args = message.content.split(" ").slice(1);
-		if (command === "saywelcome") {
-			if (message.member.hasPermission("ADMINISTRATOR")) {
-				const color = args[0]
-				const text = args.slice(0).join(" ");
-				let channel = client.channels.find("id", "486884048514449408");
-					if (text.length < 1) return message.channel.send("Can not announce nothing");
-					channel.send(text)
-			}
-		} else
-		if (command === "sayinfo") {
-			if (message.member.hasPermission("ADMINISTRATOR")) {
-				const color = args[0]
-				const text = args.slice(0).join(" ");
-				let channel = client.channels.find("id", "486884087475470337");
-					if (text.length < 1) return message.channel.send("Can not announce nothing");
-					channel.send(text)
-			}
-		} else
-		if (command === "saydonate") {
-			if (message.member.hasPermission("ADMINISTRATOR")) {
-				const color = args[0]
-				const text = args.slice(0).join(" ");
-				let channel = client.channels.find("id", "555984660103036928");
-					if (text.length < 1) return message.channel.send("Can not announce nothing");
-					channel.send(text)
-			}
-		} else
-		if (command === "saycommands") {
-			if (message.member.hasPermission("ADMINISTRATOR")) {
-			const color = args[0]
-			const text = args.slice(0).join(" ");
-			let channel = client.channels.find("id", "486884105661972480");
-				if (text.length < 1) return message.channel.send("Can not announce nothing");
-				channel.send(text)
-			}
-		} else
-		if (command === "saynews") {
-			const color = args[0]
-			const text = args.slice(0).join(" ");
-			let channel = client.channels.find("id", "486884114885246987");
-				if (text.length < 1) return message.channel.send("Can not announce nothing");
-				channel.send(text)
-		} else
+if(message.channel.id === "556689567579766799"){
+	let command = message.content.split(" ")[0];
+	command = command.slice(prefix.length);
+	let args = message.content.split(" ").slice(1);
+	if (command === "saywelcome") {
+		const color = args[0]
+		const text = args.slice(0).join(" ");
+		let channel = client.channels.find("id", "486884048514449408");
+		if (text.length < 1) return message.channel.send("Can not announce nothing");
+			channel.send(text)
+	} else
+	if (command === "sayinfo") {
+		const color = args[0]
+		const text = args.slice(0).join(" ");
+		let channel = client.channels.find("id", "486884087475470337");
+		if (text.length < 1) return message.channel.send("Can not announce nothing");
+			channel.send(text)
+	} else
+	if (command === "saydonate") {
+		const color = args[0]
+		const text = args.slice(0).join(" ");
+		let channel = client.channels.find("id", "555984660103036928");
+		if (text.length < 1) return message.channel.send("Can not announce nothing");
+			channel.send(text)
+	} else
+	if (command === "saycommands") {
+		const color = args[0]
+		const text = args.slice(0).join(" ");
+		let channel = client.channels.find("id", "486884105661972480");
+		if (text.length < 1) return message.channel.send("Can not announce nothing");
+			channel.send(text)
+	} else
+	if (command === "saynews") {
+		const color = args[0]
+		const text = args.slice(0).join(" ");
+		let channel = client.channels.find("id", "486884114885246987");
+		if (text.length < 1) return message.channel.send("Can not announce nothing");
+			channel.send(text)
+	} else
 	if (command === "saygeneral") {
-		if (message.member.hasPermission("ADMINISTRATOR")) {
-			const color = args[0]
-			const text = args.slice(0).join(" ");
-			let channel = client.channels.find("id", "486884137006006285");
-				if (text.length < 1) return message.channel.send("Can not announce nothing");
-				channel.send(text)
-			}
-		} else
-		if (command === "saysuggestions") {
-		if (message.member.hasPermission("ADMINISTRATOR")) {
-			const color = args[0]
-			const text = args.slice(0).join(" ");
-			let channel = client.channels.find("id", "486884158589894669");
-			let channel2 = client.channels.find("id", "486886635771002880");
-				if (text.length < 1) return message.channel.send("Can not announce nothing");
-				channel.send(text);
-				channel2.send("!com say New suggestion added in our Discord www.venusrust.eu/discord Check it and vote!");
-			}
-		} else
-		if (command === "saysuggestions2") {
-		if (message.member.hasPermission("ADMINISTRATOR")) {
-			const color = args[0]
-			const text = args.slice(0).join(" ");
-			let channel = client.channels.find("id", "508057785590874132");
-				if (text.length < 1) return message.channel.send("Can not announce nothing");
-				channel.send(text)
-			}
-		} else
-		if (command === "sayrust") {
-			const color = args[0]
-			const text = args.slice(0).join(" ");
-			let channel = client.channels.find("id", "486885181303685138");
-				if (text.length < 1) return message.channel.send("Can not announce nothing");
-				channel.send(text)
-		} else
-		if (command === "saypromo") {
-			const color = args[0]
-			const text = args.slice(0).join(" ");
-			let channel = client.channels.find("id", "507339579439972382");
-				if (text.length < 1) return message.channel.send("Can not announce nothing");
-				channel.send(text)
-		} else
-		if (command === "sayall") {
-		if (message.member.hasPermission("ADMINISTRATOR")) {
-			const color = args[0]
-			const text = args.slice(0).join(" ");
-			let channel = client.channels.find("id", "486884137006006285");
-				if (text.length < 1) return message.channel.send("Can not announce nothing");
-				channel.send("@everyone")
-				channel.send(text)
-			}
-		} else
-		if (command === "sayadmin") {
-			if (message.member.hasPermission("ADMINISTRATOR")) {
-			const color = args[0]
-			const text = args.slice(0).join(" ");
-			let channel = client.channels.find("id", "485176392921645087");
-				if (text.length < 1) return message.channel.send("Can not announce nothing");
-				channel.send("@everyone")
-				channel.send(text)
-			}
-		} else
-		if (command === "photos") {
-			if (message.member.hasPermission("ADMINISTRATOR")) {
-			const color = args[0]
-			const text = args.slice(0).join(" ");
-			let channel = client.channels.find("id", "486884171101241354");
-				if (text.length < 1) return message.channel.send("Can not announce nothing");
-				channel.send(text)
-			}
-		}	
-		}
+		const color = args[0]
+		const text = args.slice(0).join(" ");
+		let channel = client.channels.find("id", "486884137006006285");
+		if (text.length < 1) return message.channel.send("Can not announce nothing");
+			channel.send(text)
+	} else
+	if (command === "saysuggestions") {
+		const color = args[0]
+		const text = args.slice(0).join(" ");
+		let channel = client.channels.find("id", "486884158589894669");
+		let channel2 = client.channels.find("id", "486886635771002880");
+		if (text.length < 1) return message.channel.send("Can not announce nothing");
+			channel.send(text);
+			channel2.send("!com say New suggestion added in our Discord www.venusrust.eu/discord Check it and vote!");
+	} else
+	if (command === "saysuggestions2") {
+		const color = args[0]
+		const text = args.slice(0).join(" ");
+		let channel = client.channels.find("id", "508057785590874132");
+			if (text.length < 1) return message.channel.send("Can not announce nothing");
+			channel.send(text)
+	} else
+	if (command === "sayrust") {
+		const color = args[0]
+		const text = args.slice(0).join(" ");
+		let channel = client.channels.find("id", "486885181303685138");
+		if (text.length < 1) return message.channel.send("Can not announce nothing");
+			channel.send(text)
+	} else
+	if (command === "saypromo") {
+		const color = args[0]
+		const text = args.slice(0).join(" ");
+		let channel = client.channels.find("id", "507339579439972382");
+		if (text.length < 1) return message.channel.send("Can not announce nothing");
+			channel.send(text)
+	} else
+	if (command === "sayall") {
+		const color = args[0]
+		const text = args.slice(0).join(" ");
+		let channel = client.channels.find("id", "486884137006006285");
+			if (text.length < 1) return message.channel.send("Can not announce nothing");
+			channel.send("@everyone")
+			channel.send(text)
+	} else
+	if (command === "sayadmin") {
+		const color = args[0]
+		const text = args.slice(0).join(" ");
+		let channel = client.channels.find("id", "485176392921645087");
+		if (text.length < 1) return message.channel.send("Can not announce nothing");
+			channel.send("@everyone")
+			channel.send(text)
+	} else
+	if (command === "photos") {
+		const color = args[0]
+		const text = args.slice(0).join(" ");
+		let channel = client.channels.find("id", "486884171101241354");
+		if (text.length < 1) return message.channel.send("Can not announce nothing");
+			channel.send(text)
+	}	
+}
 });
 
 client.on("guildMemberAdd", (member) => {
