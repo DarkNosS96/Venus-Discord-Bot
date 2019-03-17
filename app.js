@@ -155,7 +155,7 @@ client.on("message", async message => {
 			message.channel.send({embed});
 		}
 		
-		if (client.channels.find("id", "520193075104972810")) {
+		if(message.channel.id === "556689567579766799"){
 		let command = message.content.split(" ")[0];
 		command = command.slice(prefix.length);
 		let args = message.content.split(" ").slice(1);
