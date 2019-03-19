@@ -169,13 +169,6 @@ if(message.channel.id === "557278884052205568"){
 		if (text.length < 1) return message.channel.send("Can not announce nothing");
 			channel.send(text)
 	} else
-	if (command === "saydonate") {
-		const color = args[0]
-		const text = args.slice(0).join(" ");
-		let channel = client.channels.find("id", "555984660103036928");
-		if (text.length < 1) return message.channel.send("Can not announce nothing");
-			channel.send(text)
-	} else
 	if (command === "saycommands") {
 		const color = args[0]
 		const text = args.slice(0).join(" ");
@@ -250,6 +243,16 @@ if(message.channel.id === "557278884052205568"){
 		if (text.length < 1) return message.channel.send("Can not announce nothing");
 			channel.send(text)
 	}	
+}
+
+if(message.channel.id === "556689567579766799"){
+	if (command === "saydonate") {
+		const color = args[0]
+		const text = args.slice(0).join(" ");
+		let channel = client.channels.find("id", "555984660103036928");
+		if (text.length < 1) return message.channel.send("Can not announce nothing");
+			channel.send(text)
+	}
 }
 });
 
