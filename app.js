@@ -253,7 +253,7 @@ if(message.channel.id === "556689567579766799"){
 		if (text.length < 1) return message.channel.send("Can not announce nothing");
 			channel.send(text)
 	}
-
+}
 });
 
 client.on("guildMemberAdd", (member) => {
