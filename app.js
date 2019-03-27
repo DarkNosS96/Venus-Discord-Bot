@@ -150,6 +150,11 @@ if(cmd === `!helpme`){
 	message.channel.send({embed});
 }
 	
+if(message.content === "ayy") {
+   const ayy = client.emojis.find(emoji => emoji.name === "ayy");
+   message.reply(`${ayy} LMAO`);
+}
+	
 	
 if(message.channel.id === "557278884052205568"){
 	let command = message.content.split(" ")[0];
