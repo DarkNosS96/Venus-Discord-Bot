@@ -150,9 +150,9 @@ if(cmd === `!helpme`){
 	message.channel.send({embed});
 }
 	
-if(message.content === "ayy") {
+if(message.content === ":ayy:") {
    const ayy = client.emojis.find(emoji => emoji.name === "ayy");
-   message.reply(`${ayy} LMAO`);
+   message.reply(message.content);
 }
 	
 	
