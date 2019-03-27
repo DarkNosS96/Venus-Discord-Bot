@@ -148,13 +148,7 @@ if(cmd === `!helpme`){
 	.addField("!map", "Shows the map online.", false)
 	.addField("!players", "Shows you the online players one the server.", false)
 	message.channel.send({embed});
-}
-	
-if(message.content === ":ayy:") {
-   const ayy = client.emojis.find(emoji => emoji.name === "ayy");
-   message.reply(message.content);
-}
-	
+}	
 	
 if(message.channel.id === "557278884052205568"){
 	let command = message.content.split(" ")[0];
