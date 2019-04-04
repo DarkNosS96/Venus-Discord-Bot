@@ -170,8 +170,6 @@ class EmojiCommand extends BaseCommand {
         }
     }
 }
-
-module.exports = EmojiCommand;
   
   
 client.on("message", async message => {
