@@ -212,6 +212,13 @@ if(message.channel.id === "557278884052205568"){
 		if (text.length < 1) return message.channel.send("Can not announce nothing");
 			channel.send(text)
 	} else
+	if (command === "saygiveaway") {
+		const color = args[0]
+		const text = args.slice(0).join(" ");
+		let channel = client.channels.find("id", "503609273142738967");
+		if (text.length < 1) return message.channel.send("Can not announce nothing");
+			channel.send(text)
+	} else
 	if (command === "sayall") {
 		const color = args[0]
 		const text = args.slice(0).join(" ");
