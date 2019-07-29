@@ -13,44 +13,6 @@ const { Client, MessageAttachment } = require('discord.js');
 var updateInterval = (1000 * 60) * 6;
 const client = new Discord.Client();
 
-function updateActivity() {
-	if(apiSite == 1) {
-		require("tls").DEFAULT_ECDH_CURVE = "auto"
-		request({ url: apiUrl, headers: { json: true, Referer: 'discord-rustserverstatus' }, timeout: 10000 }, function(err, res, body)
-		{
-		if (!err && res.statusCode == 200){
-			const server = JSON.parse(body);
-			const is_online = server.status;
-				if(is_online == "Online") {
-					const players = server.players;
-					const maxplayers = server.players_max;
-						if(debug) console.log("Updated rust-servers.info");
-						return client.user.setPresence({ game: { name: `${players}/${maxplayers} Players | !helpme`, type: 0 } });
-						} else {
-							return client.user.setPresence({ game: { name: 'Offline | !helpme', type: 0 } });
-						}
-		}
-		});
-  }
- if(apiSite == 2) {
-    request({ url: apiUrl, headers: { Referer: 'discord-rustserverstatus' }, timeout: 10000 }, function(error, response, body)
-    {
-	if (!error && response.statusCode == 200){
-        const server = JSON.parse(body);
-        const is_online = server.is_online;
-        if(is_online == 1) {
-			const players = server.players;
-			const maxplayers = server.maxplayers;
-			if(debug) console.log("Updated rust-servers.net");
-				return client.user.setActivity(`${players}/${maxplayers} | !helpme`);
-			} else {
-				return client.user.setActivity(`Offline | !helpme`);
-			}
-		}
-    });
-}
-}
-
 client.on("ready", () => {
 	console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`);
 	updateActivity();
@@ -115,7 +77,7 @@ if(cmd === `!store`){
 	return message.channel.send("https://venusrust.eu/store");
 }
 if(cmd === `!wipe`){
-	return message.channel.send("The last wipe was on **Thu 16 May **. The next wipe will be on **Thu 6 Jun**. (Around 19:00 CET.)");
+	return message.channel.send("The last wipe was on **Thu 25 July **. The next wipe will be on **Thu 8 Aug**. (Around 19:00 CET.)");
 }
 if(cmd === `!steam`){
 	return message.channel.send("https://venusrust.eu/steam");
