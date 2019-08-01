@@ -116,7 +116,7 @@ if(cmd === `!store`){
 	return message.channel.send("https://venusrust.eu/store");
 }
 if(cmd === `!wipe`){
-	return message.channel.send("The last wipe was on **Thu 25 July **. The next wipe will be on **Thu 8 Aug**. (Around 19:00 CET.)");
+	return message.channel.send("The last wipe was on **Thu 8 Aug **. The next wipe will be on **Thu 15 Aug**. (Around 19:00 CET.)");
 }
 if(cmd === `!steam`){
 	return message.channel.send("https://venusrust.eu/steam");
