@@ -10,7 +10,7 @@ const prefix = process.env.prefix || config.prefix;
 const roles = process.env.roles || config.roles;
 const { Client, MessageAttachment } = require('discord.js');
 
-client.user.setUsername("Venus");
+client.on.setUsername("Venus");
 
 var updateInterval = (1000 * 60) * 6;
 
