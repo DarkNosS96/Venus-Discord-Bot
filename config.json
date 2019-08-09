@@ -1,7 +1,7 @@
 { 
   "debug" : false,
   "apiSite" : 1,
-  "apiUrl" : "https://api.rust-servers.info/status/1605",
+  "apiUrl" : "https://api.rust-servers.info/status/145824",
   "enableRcon" : "1",
   "rconhost"   : "",
   "rconport"   : "",
