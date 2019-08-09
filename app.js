@@ -107,7 +107,7 @@ client.on("message", async message => {
 let messageArray = message.content.split(" ");
 let cmd = messageArray[0];
 if(cmd === `!ip`){
-	return message.channel.send("`195.201.86.252:28416`");
+	return message.channel.send("`195.201.80.231:30716`");
 }
 if(cmd === `!vote`){
 	return message.channel.send("https://venusrust.eu/vote");
@@ -116,7 +116,7 @@ if(cmd === `!store`){
 	return message.channel.send("https://venusrust.eu/store");
 }
 if(cmd === `!wipe`){
-	return message.channel.send("The last wipe was on **Thu 8 Aug **. The next wipe will be on **Thu 15 Aug**. (Around 19:00 CET.)");
+	return message.channel.send("The last wipe was on **Thu 1 Aug **. The next wipe will be on **Thu 15 Aug**. (Around 19:00 CET.)");
 }
 if(cmd === `!steam`){
 	return message.channel.send("https://venusrust.eu/steam");
