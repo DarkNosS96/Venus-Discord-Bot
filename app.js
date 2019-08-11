@@ -26,9 +26,9 @@ function updateActivity() {
 					const players = server.players;
 					const maxplayers = server.players_max;
 						if(debug) console.log("Updated rust-servers.info");
-						return client.user.setPresence({ game: { name: `${players}/${maxplayers} Players | !helpme`, type: 0 } });
+						console.log(`Hi`);
 						} else {
-							return client.user.setPresence({ game: { name: 'Offline | !helpme', type: 0 } });
+							return client.user.setPresence({ game: { name: 'Server is offline | !helpme', type: 0 } });
 						}
 		}
 		});
@@ -43,9 +43,9 @@ function updateActivity() {
 			const players = server.players;
 			const maxplayers = server.maxplayers;
 			if(debug) console.log("Updated rust-servers.net");
-				return client.user.setActivity(`${players}/${maxplayers} | !helpme`);
+				console.log(`Hi`);
 			} else {
-				return client.user.setActivity(`Offline | !helpme`);
+				return client.user.setActivity(`Server is offline | !helpme`);
 			}
 		}
     });
