@@ -102,7 +102,7 @@ client.on("message", async message => {
 }
 let messageArray = message.content.split(" ");
 let cmd = messageArray[0];
-if(cmd === `!ip`){{
+if(cmd === `!ip`){
 	const embed = new Discord.RichEmbed()
 	.setAuthor("Venus Rust Server", "https://i.imgur.com/rzWmJ6X.png")
 	.setTitle("Those are our IPs")
@@ -111,7 +111,6 @@ if(cmd === `!ip`){{
 	.addField("", "", false)
 	.addField("195.201.80.231:30716", "x5 SERVER", false)
 	message.channel.send({embed});
-}	
 }
 if(cmd === `!vote`){
 	return message.channel.send("https://venusrust.eu/vote");
