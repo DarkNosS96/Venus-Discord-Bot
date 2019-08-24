@@ -103,12 +103,12 @@ client.on("message", async message => {
 let messageArray = message.content.split(" ");
 let cmd = messageArray[0];
 if(cmd === `!ip`){
-	let small = new Discord.RichEmbed()
+	let embed = new Discord.RichEmbed()
 	.setAuthor("Venus x5 TRIO - CCTV|CARS|iCRAFT", "https://i.imgur.com/rzWmJ6X.png")
 	.setTitle("☆Loot++ ☆Clans ☆AutoDoors ☆BGrade ☆CCTV Cameras ☆Cars ☆InstaCraft ☆QuickSmelt ☆Teleport/Homes")
 	.setColor(0x30bdff)
 	.addField("195.201.80.231:30716", "client.connect 195.201.80.231:30716", false)
-	message.channel.send({embed});
+	channel.sendEmbed(embed);
 }
 if(cmd === `!vote`){
 	return message.channel.send("https://venusrust.eu/vote");
@@ -137,7 +137,7 @@ if(cmd === `!aaa`){
 	}
 }
 if(cmd === `!helpme`){
-	const embed = new Discord.RichEmbed()
+	let embed = new Discord.RichEmbed()
 	.setAuthor("Venus Rust Server", "https://i.imgur.com/rzWmJ6X.png")
 	.setTitle("Those are all my commands")
 	.setColor(0x30bdff)
