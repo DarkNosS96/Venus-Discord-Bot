@@ -109,6 +109,13 @@ if(cmd === `!ip`){
 	.setColor(0x30bdff)
 	.addField("195.201.80.231:30716", "client.connect 195.201.80.231:30716", false)
 	message.channel.send({embed});
+	
+	let embed2 = new Discord.RichEmbed()
+	.setAuthor("Venus Battlefield x1000|CCTV|Cars|NO BP/WB", "https://i.imgur.com/rzWmJ6X.png")
+	.setTitle("☆Loot++ ☆Clans ☆Friends ☆AutoDoors ☆BGrade ☆CCTV Cameras ☆Cars ☆InstaCraft ☆QuickSmelt ☆Teleport ☆Homes ☆No Blueprints ☆No Workbench")
+	.setColor(0x30bdff)
+	.addField("195.201.80.230:28716", "client.connect 195.201.80.230:28716", false)
+	message.channel.send({embed2});
 }
 if(cmd === `!vote`){
 	return message.channel.send("https://venusrust.eu/vote");
