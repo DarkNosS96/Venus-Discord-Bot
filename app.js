@@ -105,10 +105,10 @@ let cmd = messageArray[0];
 if(cmd === `!ip`){
 	let embed = new Discord.RichEmbed()
 	.setAuthor("Venus x5 TRIO - CCTV|CARS|iCRAFT", "https://i.imgur.com/rzWmJ6X.png")
-	.setTitle("☆Loot++ ☆Clans ☆AutoDoors ☆BGrade ☆CCTV Cameras ☆Cars ☆InstaCraft ☆QuickSmelt ☆Teleport/Homes")
+	.setTitle("☆Loot++ ☆Clans ☆AutoDoors ☆BGrade ☆CCTV Cameras ☆Cars ☆InstaCraft ☆QuickSmelt ☆Teleport ☆Homes")
 	.setColor(0x30bdff)
 	.addField("195.201.80.231:30716", "client.connect 195.201.80.231:30716", false)
-	message.channel.sendEmbed(embed);
+	message.channel.send({embed});
 }
 if(cmd === `!vote`){
 	return message.channel.send("https://venusrust.eu/vote");
