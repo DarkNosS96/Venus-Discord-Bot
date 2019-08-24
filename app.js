@@ -108,7 +108,6 @@ if(cmd === `!ip`){
 	.setTitle("Those are our IPs")
 	.setColor(0x30bdff)
 	.addField("195.201.80.230:28716", "x1000 BATTLEFIELD SERVER", false)
-	.addField(" ", " ", false)
 	.addField("195.201.80.231:30716", "x5 SERVER", false)
 	message.channel.send({ips});
 }
