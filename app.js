@@ -131,9 +131,10 @@ let embed2 = new Discord.RichEmbed({
       	}
     	]
 });
-	channel.send(embed1)
+   	channel.send(embed1)
     	.then(msg => {
-	channel.send(embed2);
+        channel.send(embed2);
+    	});
 }
 	
 let messageArray = message.content.split(" ");
