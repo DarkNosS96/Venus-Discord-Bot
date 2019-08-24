@@ -103,10 +103,7 @@ client.on("message", async message => {
 let messageArray = message.content.split(" ");
 let cmd = messageArray[0];
 if(cmd === `!ip`){
-	
-	
-	
-	
+let channel = message.channel;
 let embed1 = new Discord.RichEmbed({
   	"title": "☆Loot++ ☆Clans ☆AutoDoors ☆BGrade ☆CCTV Cameras ☆Cars ☆InstaCraft ☆QuickSmelt ☆Teleport ☆Homes",
     	"color": 10579091,
@@ -135,9 +132,9 @@ let embed2 = new Discord.RichEmbed({
       	}
     	]
 });
-	message.channel.send(embed1)
+	channel.send(embed1)
     	.then(msg => {
-	message.channel.send(embed2);
+	channel.send(embed2);
 });
 }
 if(cmd === `!vote`){
