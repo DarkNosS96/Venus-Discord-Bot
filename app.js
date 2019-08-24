@@ -141,6 +141,7 @@ let embed2 = new Discord.RichEmbed({
     	.then(msg => {
         channel.send(embed2);
     	});
+	message.channel.send(send2Embeds())
 }
 	
 	
