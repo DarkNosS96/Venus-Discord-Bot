@@ -114,11 +114,6 @@ if(cmd === `!ip`){
 	.addField("client.connect 195.201.80.231:30716", ":venus:", false)
 	message.channel.send({embed});
 }
-	
-	
-	
-	
-}
 if(cmd === `!vote`){
 	return message.channel.send("https://venusrust.eu/vote");
 }
