@@ -109,9 +109,9 @@ if(cmd === `!ip`){
 	.setTitle("Those is our Server list")
 	.setColor(0x30bdff)
 	.addField("Venus x5 SOLO|DUO|TRIO - CCTV|CARS|iCRAFT", "☆Loot++ ☆Clans ☆AutoDoors ☆BGrade ☆CCTV Cameras ☆Cars ☆InstaCraft ☆QuickSmelt ☆Teleport ☆Homes", false)
-	.addField("client.connect 195.201.80.230:28716", ":venus:.", false)
+	.addField("client.connect 195.201.80.230:28716", "<:venus:486642625638694962>", false)
 	.addField("Venus Battlefield x1000|CCTV|Cars|NO BP/WB", "☆Loot++ ☆Clans ☆Friends ☆AutoDoors ☆BGrade ☆CCTV Cameras ☆Cars ☆InstaCraft ☆QuickSmelt ☆Teleport☆Homes ☆No Blueprints ☆No Workbench", false)
-	.addField("client.connect 195.201.80.231:30716", ":venus:", false)
+	.addField("client.connect 195.201.80.231:30716", "<:venus:486642625638694962>", false)
 	message.channel.send({embed});
 }
 if(cmd === `!vote`){
