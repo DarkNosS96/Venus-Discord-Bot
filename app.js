@@ -102,8 +102,16 @@ client.on("message", async message => {
 }
 let messageArray = message.content.split(" ");
 let cmd = messageArray[0];
-if(cmd === `!ip`){
-	return message.channel.send("`195.201.80.231:30716`");
+if(cmd === `!ip`){{
+	const embed = new Discord.RichEmbed()
+	.setAuthor("Venus Rust Server", "https://i.imgur.com/rzWmJ6X.png")
+	.setTitle("Those are our IPs")
+	.setColor(0x30bdff)
+	.addField("195.201.80.230:28716", "x1000 BATTLEFIELD SERVER", false)
+	.addField("", "", false)
+	.addField("195.201.80.231:30716", "x5 SERVER", false)
+	message.channel.send({embed});
+}	
 }
 if(cmd === `!vote`){
 	return message.channel.send("https://venusrust.eu/vote");
