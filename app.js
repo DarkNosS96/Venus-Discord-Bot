@@ -105,15 +105,17 @@ let cmd = messageArray[0];
 if(cmd === `!ip`){
 	let small = new Discord.RichEmbed()
 	.setAuthor("Venus x5 TRIO - CCTV|CARS|iCRAFT", "https://i.imgur.com/rzWmJ6X.png")
+	.setTitle("☆Loot++ ☆Clans ☆AutoDoors ☆BGrade ☆CCTV Cameras ☆Cars ☆InstaCraft ☆QuickSmelt ☆Teleport/Homes")
 	.setColor(0x30bdff)
-	.addField("☆Loot++ ☆Clans ☆AutoDoors ☆BGrade ☆CCTV Cameras ☆Cars ☆InstaCraft ☆QuickSmelt ☆Teleport/Homes ", "195.201.80.231:30716", false)
+	.addField("195.201.80.231:30716", "client.connect 195.201.80.231:30716", false)
 	message.channel.send({small});
 	
 	
 	let big = new Discord.RichEmbed()
 	.setAuthor("Venus Battlefield x1000|CCTV|Cars|NO BP/WB", "https://i.imgur.com/rzWmJ6X.png")
+	.setTitle("☆Clans ☆Friends ☆AutoDoors ☆BGrade ☆CCTV Cameras ☆Cars ☆InstaCraft ☆QuickSmelt ☆Teleport/Homes ☆No Blueprints ☆No Workbench")
 	.setColor(0x30bdff)
-	.addField("☆Clans ☆Friends ☆AutoDoors ☆BGrade ☆CCTV Cameras ☆Cars ☆InstaCraft ☆QuickSmelt ☆Teleport/Homes ☆No Blueprints ☆No Workbench", "195.201.80.231:30716", false)
+	.addField("195.201.80.231:30716", "client.connect 195.201.80.231:30716", false)
 	message.channel.send({big});
 }
 if(cmd === `!vote`){
