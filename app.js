@@ -106,12 +106,11 @@ let cmd = messageArray[0];
 if(cmd === `!ip`){
 	let embed = new Discord.RichEmbed()
 	.setAuthor("Venus Servers", "https://i.imgur.com/rzWmJ6X.png")
-	.setTitle("Those is our Server list")
+	.setTitle("Venus x5 SOLO|DUO|TRIO - CCTV|CARS|iCRAFT")
 	.setColor(0x30bdff)
-	.addField("Venus x5 SOLO|DUO|TRIO - CCTV|CARS|iCRAFT", "☆Loot++ ☆Clans ☆AutoDoors ☆BGrade ☆CCTV Cameras ☆Cars ☆InstaCraft ☆QuickSmelt ☆Teleport ☆Homes", false)
-	.addField("client.connect 195.201.80.230:28716", "<:venus:486642625638694962>", false)
-	.addField("Venus Battlefield x1000|CCTV|Cars|NO BP/WB", "☆Loot++ ☆Clans ☆Friends ☆AutoDoors ☆BGrade ☆CCTV Cameras ☆Cars ☆InstaCraft ☆QuickSmelt ☆Teleport☆Homes ☆No Blueprints ☆No Workbench", false)
-	.addField("client.connect 195.201.80.231:30716", "<:venus:486642625638694962>", false)
+	.addField("☆Loot++ ☆Clans ☆AutoDoors ☆BGrade ☆CCTV Cameras ☆Cars ☆InstaCraft ☆QuickSmelt ☆Teleport ☆Homes", "client.connect 195.201.80.230:28716", false)
+	.addField("<:venus:486642625638694962>", "Venus Battlefield x1000|CCTV|Cars|NO BP/WB", false)
+	.addField("☆Loot++ ☆Clans ☆Friends ☆AutoDoors ☆BGrade ☆CCTV Cameras ☆Cars ☆InstaCraft ☆QuickSmelt ☆Teleport☆Homes ☆No Blueprints ☆No Workbench", "client.connect 195.201.80.231:30716", false)
 	message.channel.send({embed});
 }
 if(cmd === `!vote`){
