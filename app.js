@@ -103,12 +103,12 @@ client.on("message", async message => {
 let messageArray = message.content.split(" ");
 let cmd = messageArray[0];
 if(cmd === `!ip`){
-	const embed = new Discord.RichEmbed()
+	const small = new Discord.RichEmbed()
 	.setAuthor("Venus x5 TRIO - CCTV|CARS|iCRAFT", "https://i.imgur.com/rzWmJ6X.png")
 	.setTitle("☆Loot++ ☆Clans ☆AutoDoors ☆BGrade ☆CCTV Cameras ☆Cars ☆InstaCraft ☆QuickSmelt ☆Teleport/Homes")
 	.setColor(0x30bdff)
 	.addField("195.201.80.231:30716", "client.connect 195.201.80.231:30716", false)
-	message.channel.send({embed});
+	message.channel.send({small});
 }
 if(cmd === `!vote`){
 	return message.channel.send("https://venusrust.eu/vote");
