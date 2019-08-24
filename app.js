@@ -107,11 +107,11 @@ if(cmd === `!ip`){
 	.setAuthor("Venus Rust Server", "https://i.imgur.com/rzWmJ6X.png")
 	.setTitle("Those are our IPs")
 	.setColor(0x30bdff)
-	.addField("---------------------", "u200", false)
-	.addField("195.201.80.230:28716", "x1000 BATTLEFIELD SERVER", false)
-	.addField("---------------------", "u200", false)
-	.addField("195.201.80.231:30716", "x5 SERVER", false)
-	.addField("---------------------", "u200", false)
+	.addField("---------------------", "/u200", false)
+	.addField("195.201.80.231:30716", "x1000 BATTLEFIELD SERVER", false)
+	.addField("---------------------", "/u200", false)
+	.addField("195.201.80.230:28716", "x5 SERVER", false)
+	.addField("---------------------", "/u200", false)
 	message.channel.send({embed});
 }
 if(cmd === `!vote`){
