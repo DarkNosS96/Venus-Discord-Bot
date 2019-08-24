@@ -108,7 +108,7 @@ if(cmd === `!ip`){
 	.setTitle("☆Loot++ ☆Clans ☆AutoDoors ☆BGrade ☆CCTV Cameras ☆Cars ☆InstaCraft ☆QuickSmelt ☆Teleport/Homes")
 	.setColor(0x30bdff)
 	.addField("195.201.80.231:30716", "client.connect 195.201.80.231:30716", false)
-	channel.sendEmbed(embed);
+	message.channel.sendEmbed(embed);
 }
 if(cmd === `!vote`){
 	return message.channel.send("https://venusrust.eu/vote");
