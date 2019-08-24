@@ -119,7 +119,7 @@ if(cmd === `!ip`){
 	
 	message.channel.send(embed1)
     	.then(msg => {
-	channel.send(embed2);
+	message.channel.send(embed2);
 }
 if(cmd === `!vote`){
 	return message.channel.send("https://venusrust.eu/vote");
