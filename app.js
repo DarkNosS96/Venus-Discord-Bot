@@ -100,9 +100,8 @@ client.on("message", async message => {
 	let channel = client.channels.find("id", "520193075104972810");
 	channel.send("[" + message.author.username + "]: " + message.content) //Message from : Message
 }
-let messageArray = message.content.split(" ");
-let cmd = messageArray[0];
-if(cmd === `!ip`){
+	
+function send2Embeds(message) {
 let channel = message.channel;
 let embed1 = new Discord.RichEmbed({
   	"title": "☆Loot++ ☆Clans ☆AutoDoors ☆BGrade ☆CCTV Cameras ☆Cars ☆InstaCraft ☆QuickSmelt ☆Teleport ☆Homes",
@@ -135,7 +134,12 @@ let embed2 = new Discord.RichEmbed({
 	channel.send(embed1)
     	.then(msg => {
 	channel.send(embed2);
-});
+}
+	
+let messageArray = message.content.split(" ");
+let cmd = messageArray[0];
+if(cmd === `!ip`){
+message.channel.send(send2Embeds())
 }
 if(cmd === `!vote`){
 	return message.channel.send("https://venusrust.eu/vote");
