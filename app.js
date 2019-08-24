@@ -103,14 +103,18 @@ client.on("message", async message => {
 let messageArray = message.content.split(" ");
 let cmd = messageArray[0];
 if(cmd === `!ip`){
-	let embed = new Discord.RichEmbed()
-	.setAuthor("Venus Rust Server", "https://i.imgur.com/rzWmJ6X.png")
-	.setTitle("Those are our IPs")
+	let small = new Discord.RichEmbed()
+	.setAuthor("Venus x5 TRIO - CCTV|CARS|iCRAFT", "https://i.imgur.com/rzWmJ6X.png")
 	.setColor(0x30bdff)
-	.addField("195.201.80.231:30716", "x1000 BATTLEFIELD SERVER", false)
-	.addField("---------------------", "---------------------", false)
-	.addField("195.201.80.230:28716", "x5 SERVER", false)
-	message.channel.send({embed});
+	.addField("☆Loot++ ☆Clans ☆AutoDoors ☆BGrade ☆CCTV Cameras ☆Cars ☆InstaCraft ☆QuickSmelt ☆Teleport/Homes ", "195.201.80.231:30716", false)
+	message.channel.send({small});
+	
+	
+	let big = new Discord.RichEmbed()
+	.setAuthor("Venus Battlefield x1000|CCTV|Cars|NO BP/WB", "https://i.imgur.com/rzWmJ6X.png")
+	.setColor(0x30bdff)
+	.addField("☆Clans ☆Friends ☆AutoDoors ☆BGrade ☆CCTV Cameras ☆Cars ☆InstaCraft ☆QuickSmelt ☆Teleport/Homes ☆No Blueprints ☆No Workbench", "195.201.80.231:30716", false)
+	message.channel.send({big});
 }
 if(cmd === `!vote`){
 	return message.channel.send("https://venusrust.eu/vote");
