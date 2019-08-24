@@ -101,6 +101,12 @@ client.on("message", async message => {
 	channel.send("[" + message.author.username + "]: " + message.content) //Message from : Message
 }
 	
+let messageArray = message.content.split(" ");
+let cmd = messageArray[0];
+if(cmd === `!ip`){
+	
+	
+	
 function send2Embeds(message) {
 let channel = message.channel;
 let embed1 = new Discord.RichEmbed({
@@ -137,10 +143,9 @@ let embed2 = new Discord.RichEmbed({
     	});
 }
 	
-let messageArray = message.content.split(" ");
-let cmd = messageArray[0];
-if(cmd === `!ip`){
-message.channel.send(send2Embeds())
+	
+	
+	
 }
 if(cmd === `!vote`){
 	return message.channel.send("https://venusrust.eu/vote");
