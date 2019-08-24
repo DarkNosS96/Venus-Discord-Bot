@@ -104,44 +104,15 @@ client.on("message", async message => {
 let messageArray = message.content.split(" ");
 let cmd = messageArray[0];
 if(cmd === `!ip`){
-	
-	
-	
-function send2Embeds(message) {
-let channel = message.channel;
-let embed1 = new Discord.RichEmbed({
-  	"title": "☆Loot++ ☆Clans ☆AutoDoors ☆BGrade ☆CCTV Cameras ☆Cars ☆InstaCraft ☆QuickSmelt ☆Teleport ☆Homes",
-    	"color": 10579091,
-    	"author": {
-        	"name": "Venus x5 TRIO - CCTV|CARS|iCRAFT",
-		"icon_url": "https://i.imgur.com/rzWmJ6X.png"
-		},
-  	"fields": [
-     	{
-        "name": "195.201.80.230:28716",
-        "value": "client.connect 195.201.80.230:28716"
-      	}
-    	]
-});	
-let embed2 = new Discord.RichEmbed({
-  	"title": "☆Loot++ ☆Clans ☆Friends ☆AutoDoors ☆BGrade ☆CCTV Cameras ☆Cars ☆InstaCraft ☆QuickSmelt ☆Teleport ☆Homes ☆No Blueprints ☆No Workbench",
-    	"color": 10579091,
-    	"author": {
-        	"name": "Venus Battlefield x1000|CCTV|Cars|NO BP/WB",
-		"icon_url": "https://i.imgur.com/rzWmJ6X.png"
-		},
-  	"fields": [
-     	{
-        "name": "195.201.80.231:30716",
-        "value": "client.connect 195.201.80.231:30716"
-      	}
-    	]
-});
-   	channel.send(embed1)
-    	.then(msg => {
-        channel.send(embed2);
-    	});
-	message.channel.send(send2Embeds())
+	let embed = new Discord.RichEmbed()
+	.setAuthor("Venus Servers", "https://i.imgur.com/rzWmJ6X.png")
+	.setTitle("Those is our Server list")
+	.setColor(0x30bdff)
+	.addField("Venus x5 SOLO|DUO|TRIO - CCTV|CARS|iCRAFT", "☆Loot++ ☆Clans ☆AutoDoors ☆BGrade ☆CCTV Cameras ☆Cars ☆InstaCraft ☆QuickSmelt ☆Teleport ☆Homes", false)
+	.addField("client.connect 195.201.80.230:28716", ":venus:.", false)
+	.addField("Venus Battlefield x1000|CCTV|Cars|NO BP/WB", "☆Loot++ ☆Clans ☆Friends ☆AutoDoors ☆BGrade ☆CCTV Cameras ☆Cars ☆InstaCraft ☆QuickSmelt ☆Teleport☆Homes ☆No Blueprints ☆No Workbench", false)
+	.addField("client.connect 195.201.80.231:30716", ":venus:", false)
+	message.channel.send({embed});
 }
 	
 	
